@@ -41,7 +41,8 @@ def get_physical_location(address):
         response = reader.city(ip_address)
         country = response.country.name
         city = response.city.name
-        return f"{country}, {city}"
+        #return f"{country}_{city}"
+        return f"{country}"
         #return f"油管绵阿羊_{country}"
     except geoip2.errors.AddressNotFoundError as e:
         print(f"Error: {e}")
@@ -151,7 +152,7 @@ def process_hysteria2(data, index):
         insecure = json_data["tls"]["insecure"]
         sni = json_data["tls"]["sni"]
         location = get_physical_location(server)
-        name = f"{location}_hy2_{index}"
+        name = f"{location}_hysteria2_{index}"
 
         # 创建当前网址的proxy字典
         proxy = {
