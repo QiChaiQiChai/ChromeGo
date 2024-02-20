@@ -1,1 +1,191 @@
-
+port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+dns:
+  enable: true
+  listen: :53
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+  - 223.5.5.5
+  - 8.8.8.8
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  fallback:
+  - https://1.0.0.1/dns-query
+  - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 240.0.0.0/4
+proxies:
+- name: WARP
+  type: wireguard
+  server: 162.159.192.1
+  port: 2408
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:87ad:b400:91:eadb:887f
+  private-key: wIC19yRRSJkhVJcE09Qo9bE3P3PIwS3yyqyUnjwNO34=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  udp: true
+  ip-version: ipv6-prefer
+  reserved: XiBe
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 8.8.8.8
+  dialer-proxy: WARP前置节点
+- name: France_hysteria
+  type: hysteria
+  server: 51.158.54.46
+  port: 55396
+  ports: 55396
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: youku.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: United States_hysteria
+  type: hysteria
+  server: 173.234.25.52
+  port: 48919
+  ports: 48919
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: Taiwan_hysteria
+  type: hysteria
+  server: www.dtku40.xyz
+  port: 18490
+  ports: 18490
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: United States_hysteria
+  type: hysteria
+  server: 167.160.91.115
+  port: 41189
+  ports: 41189
+  auth_str: bWAwIqINo7XDm1fUlXQGBifVIXoYs1ylgVKqWFKzK1XyDKuwNF
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: www.amazon.cn
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: France_hysteria2
+  type: hysteria2
+  server: 62.210.103.0
+  port: 22483
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: United States_hysteria2
+  type: hysteria2
+  server: 64.110.25.11
+  port: 33337
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: France_hysteria2
+  type: hysteria2
+  server: 62.210.103.0
+  port: 22483
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: France_hysteria2
+  type: hysteria2
+  server: 51.159.77.198
+  port: 29277
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+proxy-groups:
+- name: 节点选择
+  type: select
+  proxies:
+  - WARP
+  - 自动选择
+  - 负载均衡
+  - 手动选择
+  - DIRECT
+- name: WARP前置节点
+  type: select
+  proxies:
+  - 自动选择
+  - 负载均衡
+  - 手动选择
+- name: 自动选择
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - France_hysteria
+  - United States_hysteria
+  - Taiwan_hysteria
+  - United States_hysteria
+  - France_hysteria2
+  - United States_hysteria2
+  - France_hysteria2
+  - France_hysteria2
+- name: 手动选择
+  type: select
+  proxies:
+  - France_hysteria
+  - United States_hysteria
+  - Taiwan_hysteria
+  - United States_hysteria
+  - France_hysteria2
+  - United States_hysteria2
+  - France_hysteria2
+  - France_hysteria2
+- name: 负载均衡
+  type: load-balance
+  proxies:
+  - France_hysteria
+  - United States_hysteria
+  - Taiwan_hysteria
+  - United States_hysteria
+  - France_hysteria2
+  - United States_hysteria2
+  - France_hysteria2
+  - France_hysteria2
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  strategy: round-robin
+rules:
+- DOMAIN,clash.razord.top,DIRECT
+- DOMAIN,yacd.haishan.me,DIRECT
+- GEOIP,LAN,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,节点选择
