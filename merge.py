@@ -325,7 +325,7 @@ def process_xray(data, index):
 merged_proxies = []
 
 # 处理 clash URLs
-process_urls('./urls/clash_urls.txt', process_clash)
+#process_urls('./urls/clash_urls.txt', process_clash)
 
 # 处理 shadowtls URLs
 #process_urls('./urls/sb_urls.txt', process_sb)
