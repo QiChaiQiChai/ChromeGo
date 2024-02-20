@@ -230,7 +230,7 @@ def process_hysteria(data, index):
         auth = json_data.get("auth_str", "")
         # 生成URL
         location = get_physical_location(server)
-        name = f"{location}_hysteria_{index}"
+        name = f"{location}_hysteria"
         hysteria = f"hysteria://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
         merged_proxies.append(hysteria)
 
@@ -249,7 +249,7 @@ def process_hysteria2(data, index):
         auth = json_data["auth"]
         # 生成URL
         location = get_physical_location(server)
-        name = f"{location}_hysteria2_{index}"
+        name = f"{location}_hysteria2"
         hysteria2 = f"hysteria2://{auth}@{server}?insecure={insecure}&sni={sni}#{name}"
 
         merged_proxies.append(hysteria2)
