@@ -101,23 +101,23 @@ def process_clash(data, index):
 
                 #     merged_proxies.append(vmess_meta)
 
-                if proxy['type'] == 'tuic':
-                    server = proxy.get("server", "")
-                    port = int(proxy.get("port", 443))
-                    uuid = proxy.get("uuid", "")
-                    password = proxy.get("password", "")
-                    sni = proxy.get("sni", "")
-                    insecure = int(proxy.get("skip-cert-verify", 0))
-                    udp_relay_mode = proxy.get("udp-relay-mode", "naive")
-                    congestion = proxy.get("congestion-controller", "bbr")
-                    alpn = proxy.get("alpn", [])[0] if proxy.get("alpn") and len(proxy["alpn"]) > 0 else None
-                    location = get_physical_location(server)
-                    name = f"{location}_tuic"
-                    #tuic_meta_neko = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure={insecure}&alpn={alpn}&mode={udp_relay_mode}"
-                    tuic_meta = f"tuic://{uuid}:{password}@{server}:{port}?sni={sni}&congestion_control={congestion}&udp_relay_mode={udp_relay_mode}&alpn={alpn}&allow_insecure={insecure}#{name}"
-                    merged_proxies.append(tuic_meta)
+                # if proxy['type'] == 'tuic':
+                #     server = proxy.get("server", "")
+                #     port = int(proxy.get("port", 443))
+                #     uuid = proxy.get("uuid", "")
+                #     password = proxy.get("password", "")
+                #     sni = proxy.get("sni", "")
+                #     insecure = int(proxy.get("skip-cert-verify", 0))
+                #     udp_relay_mode = proxy.get("udp-relay-mode", "naive")
+                #     congestion = proxy.get("congestion-controller", "bbr")
+                #     alpn = proxy.get("alpn", [])[0] if proxy.get("alpn") and len(proxy["alpn"]) > 0 else None
+                #     location = get_physical_location(server)
+                #     name = f"{location}_tuic"
+                #     #tuic_meta_neko = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure={insecure}&alpn={alpn}&mode={udp_relay_mode}"
+                #     tuic_meta = f"tuic://{uuid}:{password}@{server}:{port}?sni={sni}&congestion_control={congestion}&udp_relay_mode={udp_relay_mode}&alpn={alpn}&allow_insecure={insecure}#{name}"
+                #     merged_proxies.append(tuic_meta)
 
-                elif proxy['type'] == "hysteria2":
+                if proxy['type'] == "hysteria2":
                     server = proxy.get("server", "")
                     port = int(proxy.get("port", 443))
                     auth = proxy.get("password", "")
@@ -126,7 +126,7 @@ def process_clash(data, index):
                     sni = proxy.get("sni", "")
                     insecure = int(proxy.get("skip-cert-verify", 0))
                     location = get_physical_location(server)
-                    name = f"{location}_hysteria2"
+                    name = f"hy2 {location}"
                     hysteria2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}&obfs={obfs}&obfs-password={obfs_password}#{name}"
                     merged_proxies.append(hysteria2_meta)
 
@@ -145,7 +145,7 @@ def process_clash(data, index):
                     auth = proxy.get("auth-str", "")
                     # 生成URL
                     location = get_physical_location(server)
-                    name = f"{location}_hysteria"
+                    name = f"hy {location}"
                     hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={ports}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
                     merged_proxies.append(hysteria_meta)
 
@@ -230,7 +230,7 @@ def process_hysteria(data, index):
         auth = json_data.get("auth_str", "")
         # 生成URL
         location = get_physical_location(server)
-        name = f"{location}_hysteria"
+        name = f"hy {location}"
         hysteria = f"hysteria://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
         merged_proxies.append(hysteria)
 
@@ -249,7 +249,7 @@ def process_hysteria2(data, index):
         auth = json_data["auth"]
         # 生成URL
         location = get_physical_location(server)
-        name = f"{location}_hysteria2"
+        name = f"hy2 {location}"
         hysteria2 = f"hysteria2://{auth}@{server}?insecure={insecure}&sni={sni}#{name}"
 
         merged_proxies.append(hysteria2)
