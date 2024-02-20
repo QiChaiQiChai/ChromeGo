@@ -41,7 +41,7 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: Hy France
+- name: France_Paris
   type: hysteria
   server: 51.158.54.46
   port: 55396
@@ -55,7 +55,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Hy United States
+- name: United States_Los Angeles
   type: hysteria
   server: 173.234.25.52
   port: 48919
@@ -69,7 +69,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Hy Taiwan
+- name: Taiwan_Taipei
   type: hysteria
   server: www.dtku40.xyz
   port: 18490
@@ -83,7 +83,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Hy United States
+- name: United States_Los Angeles
   type: hysteria
   server: 167.160.91.115
   port: 41189
@@ -97,7 +97,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Hy2 France
+- name: France_Neuilly-sur-Seine
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -105,7 +105,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: Hy2 United States
+- name: United States_Los Angeles
   type: hysteria2
   server: 64.110.25.11
   port: 33337
@@ -113,7 +113,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: Hy2 France
+- name: France_Neuilly-sur-Seine
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -121,7 +121,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: Hy2 France
+- name: France_Paris
   type: hysteria2
   server: 51.159.77.198
   port: 29277
@@ -150,36 +150,36 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - Hy France
-  - Hy United States
-  - Hy Taiwan
-  - Hy United States
-  - Hy2 France
-  - Hy2 United States
-  - Hy2 France
-  - Hy2 France
+  - France_Paris
+  - United States_Los Angeles
+  - Taiwan_Taipei
+  - United States_Los Angeles
+  - France_Neuilly-sur-Seine
+  - United States_Los Angeles
+  - France_Neuilly-sur-Seine
+  - France_Paris
 - name: 手动选择
   type: select
   proxies:
-  - Hy France
-  - Hy United States
-  - Hy Taiwan
-  - Hy United States
-  - Hy2 France
-  - Hy2 United States
-  - Hy2 France
-  - Hy2 France
+  - France_Paris
+  - United States_Los Angeles
+  - Taiwan_Taipei
+  - United States_Los Angeles
+  - France_Neuilly-sur-Seine
+  - United States_Los Angeles
+  - France_Neuilly-sur-Seine
+  - France_Paris
 - name: 负载均衡
   type: load-balance
   proxies:
-  - Hy France
-  - Hy United States
-  - Hy Taiwan
-  - Hy United States
-  - Hy2 France
-  - Hy2 United States
-  - Hy2 France
-  - Hy2 France
+  - France_Paris
+  - United States_Los Angeles
+  - Taiwan_Taipei
+  - United States_Los Angeles
+  - France_Neuilly-sur-Seine
+  - United States_Los Angeles
+  - France_Neuilly-sur-Seine
+  - France_Paris
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
