@@ -49,59 +49,59 @@ def process_clash(data, index):
             proxies = content.get('proxies', [])
             
             for proxy in proxies:
-                # 如果类型是vless
-                if proxy['type'] == 'vless' :
-                    server = proxy.get("server", "")
-                    port = int(proxy.get("port", 443))
-                    udp = proxy.get("udp", "")
-                    uuid = proxy.get("uuid", "")
-                    network = proxy.get("network", "")
-                    tls = int(proxy.get("tls", 0))
-                    xudp = proxy.get("xudp", "")
-                    sni = proxy.get("servername", "")
-                    flow = proxy.get("flow", "")
-                    publicKey = proxy.get('reality-opts', {}).get('public-key', '')
-                    short_id = proxy.get('reality-opts', {}).get('short-id', '')
-                    fp = proxy.get("client-fingerprint", "")
-                    insecure = int(proxy.get("skip-cert-verify", 0))
-                    grpc_serviceName = proxy.get('grpc-opts', {}).get('grpc-service-name', '')
+                # # 如果类型是vless
+                # if proxy['type'] == 'vless' :
+                #     server = proxy.get("server", "")
+                #     port = int(proxy.get("port", 443))
+                #     udp = proxy.get("udp", "")
+                #     uuid = proxy.get("uuid", "")
+                #     network = proxy.get("network", "")
+                #     tls = int(proxy.get("tls", 0))
+                #     xudp = proxy.get("xudp", "")
+                #     sni = proxy.get("servername", "")
+                #     flow = proxy.get("flow", "")
+                #     publicKey = proxy.get('reality-opts', {}).get('public-key', '')
+                #     short_id = proxy.get('reality-opts', {}).get('short-id', '')
+                #     fp = proxy.get("client-fingerprint", "")
+                #     insecure = int(proxy.get("skip-cert-verify", 0))
+                #     grpc_serviceName = proxy.get('grpc-opts', {}).get('grpc-service-name', '')
 
-                    ws_path = proxy.get('ws-opts', {}).get('path', '')
-                    ws_headers_host = proxy.get('ws-opts', {}).get('headers', {}).get('Host', '')
-                    if tls == 0:
-                        security = 'none'
-                    elif tls == 1 and publicKey != '':
-                        security = 'reality'
-                    else:
-                        security = 'tls'
-                    location = get_physical_location(server)
-                    name = f"{location}_vless_{index}"
-                    vless_meta =  f"vless://{uuid}@{server}:{port}?security={security}&allowInsecure{insecure}&flow={flow}&type={network}&fp={fp}&pbk={publicKey}&sid={short_id}&sni={sni}&serviceName={grpc_serviceName}&path={ws_path}&host={ws_headers_host}#{name}"
+                #     ws_path = proxy.get('ws-opts', {}).get('path', '')
+                #     ws_headers_host = proxy.get('ws-opts', {}).get('headers', {}).get('Host', '')
+                #     if tls == 0:
+                #         security = 'none'
+                #     elif tls == 1 and publicKey != '':
+                #         security = 'reality'
+                #     else:
+                #         security = 'tls'
+                #     location = get_physical_location(server)
+                #     name = f"{location}_vless_{index}"
+                #     vless_meta =  f"vless://{uuid}@{server}:{port}?security={security}&allowInsecure{insecure}&flow={flow}&type={network}&fp={fp}&pbk={publicKey}&sid={short_id}&sni={sni}&serviceName={grpc_serviceName}&path={ws_path}&host={ws_headers_host}#{name}"
 
-                    merged_proxies.append(vless_meta)
+                #     merged_proxies.append(vless_meta)
 
-                if proxy['type'] == 'vmess' :
-                    server = proxy.get("server", "")
-                    port = int(proxy.get("port", 443))
-                    uuid = proxy.get("uuid", "")
-                    #cipher = proxy.get("cipher", "")
-                    alterId = proxy.get("alterId", "")
-                    network = proxy.get("network", "")
-                    tls = int(proxy.get("tls", 0))
-                    if tls == 0:
-                        security = "none"
-                    elif tls == 1:
-                        security = "tls"
-                    sni = proxy.get("servername", "")
-                    ws_path = proxy.get('ws-opts', {}).get('path', '')
-                    ws_headers_host = proxy.get('ws-opts', {}).get('headers', {}).get('Host', '')
-                    location = get_physical_location(server)
-                    name = f"{location}_vmess_{index}"
-                    vmess_meta =  f"vmess://{uuid}@{server}:{port}?security={security}&allowInsecure{insecure}&type={network}&fp={fp}&sni={sni}&path={ws_path}&host={ws_headers_host}#{name}"
+                # if proxy['type'] == 'vmess' :
+                #     server = proxy.get("server", "")
+                #     port = int(proxy.get("port", 443))
+                #     uuid = proxy.get("uuid", "")
+                #     #cipher = proxy.get("cipher", "")
+                #     alterId = proxy.get("alterId", "")
+                #     network = proxy.get("network", "")
+                #     tls = int(proxy.get("tls", 0))
+                #     if tls == 0:
+                #         security = "none"
+                #     elif tls == 1:
+                #         security = "tls"
+                #     sni = proxy.get("servername", "")
+                #     ws_path = proxy.get('ws-opts', {}).get('path', '')
+                #     ws_headers_host = proxy.get('ws-opts', {}).get('headers', {}).get('Host', '')
+                #     location = get_physical_location(server)
+                #     name = f"{location}_vmess_{index}"
+                #     vmess_meta =  f"vmess://{uuid}@{server}:{port}?security={security}&allowInsecure{insecure}&type={network}&fp={fp}&sni={sni}&path={ws_path}&host={ws_headers_host}#{name}"
 
-                    merged_proxies.append(vmess_meta)
+                #     merged_proxies.append(vmess_meta)
 
-                elif proxy['type'] == 'tuic':
+                if proxy['type'] == 'tuic':
                     server = proxy.get("server", "")
                     port = int(proxy.get("port", 443))
                     uuid = proxy.get("uuid", "")
@@ -149,35 +149,35 @@ def process_clash(data, index):
                     hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={ports}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
                     merged_proxies.append(hysteria_meta)
 
-                elif proxy['type'] == 'ssr':
-                    server = proxy.get("server", "")
-                    port = int(proxy.get("port", 443))
-                    password = proxy.get("password", "")
-                    password = base64.b64encode(password.encode()).decode()
-                    cipher = proxy.get("cipher", "")
-                    obfs = proxy.get("obfs", "")
-                    protocol = proxy.get("protocol", "")
-                    protocol_param = proxy.get("protocol-param", "")
-                    protocol_param = base64.b64encode(protocol_param.encode()).decode()
-                    obfs_param = proxy.get("obfs-param", "")
-                    obfs_param = base64.b64encode(obfs_param.encode()).decode()
-                    # 生成URL
-                    ssr_source=f"{server}:{port}:{protocol}:{cipher}:{obfs}:{password}/?obfsparam={obfs_param}&protoparam={protocol_param}&remarks=ssr_meta_{index}&protoparam{protocol_param}=&obfsparam={obfs_param}"
-                    ssr_source=base64.b64encode(ssr_source.encode()).decode()
-                    ssr_meta = f"ssr://{ssr_source}"
-                    merged_proxies.append(ssr_meta)
+                # elif proxy['type'] == 'ssr':
+                #     server = proxy.get("server", "")
+                #     port = int(proxy.get("port", 443))
+                #     password = proxy.get("password", "")
+                #     password = base64.b64encode(password.encode()).decode()
+                #     cipher = proxy.get("cipher", "")
+                #     obfs = proxy.get("obfs", "")
+                #     protocol = proxy.get("protocol", "")
+                #     protocol_param = proxy.get("protocol-param", "")
+                #     protocol_param = base64.b64encode(protocol_param.encode()).decode()
+                #     obfs_param = proxy.get("obfs-param", "")
+                #     obfs_param = base64.b64encode(obfs_param.encode()).decode()
+                #     # 生成URL
+                #     ssr_source=f"{server}:{port}:{protocol}:{cipher}:{obfs}:{password}/?obfsparam={obfs_param}&protoparam={protocol_param}&remarks=ssr_meta_{index}&protoparam{protocol_param}=&obfsparam={obfs_param}"
+                #     ssr_source=base64.b64encode(ssr_source.encode()).decode()
+                #     ssr_meta = f"ssr://{ssr_source}"
+                #     merged_proxies.append(ssr_meta)
 
-                #目前仅支持最原始版本ss，无插件支持
-                elif proxy['type'] == 'sstest':
-                    server = proxy.get("server", "")
-                    port = int(proxy.get("port", 443))
-                    password = proxy.get("password", "")
-                    cipher = proxy.get("cipher", "")
-                    # 生成URL
-                    ss_source=f"{cipher}:{password}@{server}:{port}"                    
-                    ss_source=base64.b64encode(ss_source.encode()).decode()
-                    ss_meta = f"ss://{ss_source}"
-                    merged_proxies.append(ss_meta)
+                # #目前仅支持最原始版本ss，无插件支持
+                # elif proxy['type'] == 'sstest':
+                #     server = proxy.get("server", "")
+                #     port = int(proxy.get("port", 443))
+                #     password = proxy.get("password", "")
+                #     cipher = proxy.get("cipher", "")
+                #     # 生成URL
+                #     ss_source=f"{cipher}:{password}@{server}:{port}"                    
+                #     ss_source=base64.b64encode(ss_source.encode()).decode()
+                #     ss_meta = f"ss://{ss_source}"
+                #     merged_proxies.append(ss_meta)
 
 def process_naive(data, index):
     try:
@@ -325,7 +325,7 @@ def process_xray(data, index):
 merged_proxies = []
 
 # 处理 clash URLs
-#process_urls('./urls/clash_urls.txt', process_clash)
+process_urls('./urls/clash_urls.txt', process_clash)
 
 # 处理 shadowtls URLs
 #process_urls('./urls/sb_urls.txt', process_sb)
