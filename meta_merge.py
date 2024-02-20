@@ -110,7 +110,7 @@ def process_hysteria(data, index):
         alpn = json_data["alpn"]
         protocol = json_data["protocol"]
         location = get_physical_location(server)
-        name = f"{location}_hy_{index}"
+        name = f"{location}_hysteria"
 
         # 创建当前网址的proxy字典
         proxy = {
@@ -152,7 +152,7 @@ def process_hysteria2(data, index):
         insecure = json_data["tls"]["insecure"]
         sni = json_data["tls"]["sni"]
         location = get_physical_location(server)
-        name = f"{location}_hysteria2_{index}"
+        name = f"{location}_hysteria2"
 
         # 创建当前网址的proxy字典
         proxy = {
@@ -266,7 +266,7 @@ def update_warp_proxy_groups(config_warp_data, merged_proxies):
 merged_proxies = []
 
 # 处理 clash URLs
-process_urls('./urls/clash_urls.txt', process_clash)
+#process_urls('./urls/clash_urls.txt', process_clash)
 
 # 处理 shadowtls URLs
 #process_urls('./urls/sb_urls.txt', process_sb)
