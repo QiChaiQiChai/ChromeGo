@@ -1,9 +1,9 @@
 import requests
 import os
 
-url = "https://sing-box-subscribe.vercel.app/config/https:/mareep.netlify.app/sub/shadowrocket_base64.txt"
+url = "https://sing-box-subscribe-doraemon.vercel.app/config/https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/shadowrocket_base64.txt&file=https://raw.githubusercontent.com/QiChaiQiChai/sing-box-subscribe_configs/main/1.json"
 output_folder = "sub"
-output_filename = "sb.json"
+output_filename = "sing-box.json"
 
 # 发送HTTP请求
 response = requests.get(url)
