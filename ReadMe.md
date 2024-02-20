@@ -23,12 +23,12 @@
 ### 不套warp版本（clashmeta）
 
 ```
-https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/chromrgo_clash.yaml
+https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/chromego_clash.yaml
 ```
 ### 套warp版本（clashmeta）
 
 ```
-https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/chromrgo2warp_clash.yaml
+https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/chromego2warp_clash.yaml
 ```
 
 ### 通用base64链接 （shadowrocket和nekoray系列）
