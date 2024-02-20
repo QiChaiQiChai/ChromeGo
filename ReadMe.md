@@ -1,7 +1,3 @@
-## 简介
-
-油管：[绵阿羊](https://www.youtube.com/channel/UC9xYHJIRj7oXTPYYrTv2U2A)
-
 ## 注意事项
 
 套上warp可绕过chromego封锁的网站（P，X）
@@ -27,23 +23,23 @@
 ### 不套warp版本（clashmeta）
 
 ```
-https://mareep.netlify.app/sub/merged_proxies_new.yaml
+https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/chromrgo_clash.yaml
 ```
 ### 套warp版本（clashmeta）
 
 ```
-https://mareep.netlify.app/sub/merged_warp_proxies_new.yaml
+https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/chromrgo2warp_clash.yaml
 ```
 
 ### 通用base64链接 （shadowrocket和nekoray系列）
 ```
-https://mareep.netlify.app/sub/shadowrocket_base64.txt
+https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/base64.txt
 ```
 
 ### sing-box订阅链接（1.8.0以上）
 
 ```
-https://mareep.netlify.app/sub/sb.json
+https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/sing-box.json
 ```
 
 
