@@ -126,7 +126,7 @@ def process_clash(data, index):
                     sni = proxy.get("sni", "")
                     insecure = int(proxy.get("skip-cert-verify", 0))
                     location = get_physical_location(server)
-                    name = f"hy2 {location}"
+                    name = f"Hy2 {location}"
                     hysteria2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}&obfs={obfs}&obfs-password={obfs_password}#{name}"
                     merged_proxies.append(hysteria2_meta)
 
@@ -145,7 +145,7 @@ def process_clash(data, index):
                     auth = proxy.get("auth-str", "")
                     # 生成URL
                     location = get_physical_location(server)
-                    name = f"hy {location}"
+                    name = f"Hy {location}"
                     hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={ports}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
                     merged_proxies.append(hysteria_meta)
 
@@ -230,7 +230,7 @@ def process_hysteria(data, index):
         auth = json_data.get("auth_str", "")
         # 生成URL
         location = get_physical_location(server)
-        name = f"hy {location}"
+        name = f"Hy {location}"
         hysteria = f"hysteria://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
         merged_proxies.append(hysteria)
 
@@ -249,7 +249,7 @@ def process_hysteria2(data, index):
         auth = json_data["auth"]
         # 生成URL
         location = get_physical_location(server)
-        name = f"hy2 {location}"
+        name = f"Hy2 {location}"
         hysteria2 = f"hysteria2://{auth}@{server}?insecure={insecure}&sni={sni}#{name}"
 
         merged_proxies.append(hysteria2)
