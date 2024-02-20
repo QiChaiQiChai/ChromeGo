@@ -41,7 +41,7 @@ def get_physical_location(address):
         response = reader.city(ip_address)
         country = response.country.name
         city = response.city.name
-        return f"{country}_{city}"
+        return f"{country}, {city}"
         #return f"{country}"
         #return f"油管绵阿羊_{country}"
     except geoip2.errors.AddressNotFoundError as e:
