@@ -126,9 +126,9 @@ def process_clash(data, index):
                     sni = proxy.get("sni", "")
                     insecure = int(proxy.get("skip-cert-verify", 0))
                     location = get_physical_location(server)
-                    name = f"{location}_hy2_{index}"
-                    hy2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}&obfs={obfs}&obfs-password={obfs_password}#{name}"
-                    merged_proxies.append(hy2_meta)
+                    name = f"{location}_hysteria2_{index}"
+                    hysteria2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}&obfs={obfs}&obfs-password={obfs_password}#{name}"
+                    merged_proxies.append(hysteria2_meta)
 
                 elif proxy['type'] == 'hysteria':
                     server = proxy.get("server", "")
@@ -145,7 +145,7 @@ def process_clash(data, index):
                     auth = proxy.get("auth-str", "")
                     # 生成URL
                     location = get_physical_location(server)
-                    name = f"{location}_hy_{index}"
+                    name = f"{location}_hysteria_{index}"
                     hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={ports}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
                     merged_proxies.append(hysteria_meta)
 
@@ -166,6 +166,7 @@ def process_clash(data, index):
                     ssr_source=base64.b64encode(ssr_source.encode()).decode()
                     ssr_meta = f"ssr://{ssr_source}"
                     merged_proxies.append(ssr_meta)
+
                 #目前仅支持最原始版本ss，无插件支持
                 elif proxy['type'] == 'sstest':
                     server = proxy.get("server", "")
@@ -173,11 +174,11 @@ def process_clash(data, index):
                     password = proxy.get("password", "")
                     cipher = proxy.get("cipher", "")
                     # 生成URL
-                    ss_source=f"{cipher}:{password}@{server}:{port}"
-                    
+                    ss_source=f"{cipher}:{password}@{server}:{port}"                    
                     ss_source=base64.b64encode(ss_source.encode()).decode()
                     ss_meta = f"ss://{ss_source}"
                     merged_proxies.append(ss_meta)
+
 def process_naive(data, index):
     try:
         json_data = json.loads(data)
