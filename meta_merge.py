@@ -110,7 +110,7 @@ def process_hysteria(data, index):
         alpn = json_data["alpn"]
         protocol = json_data["protocol"]
         location = get_physical_location(server)
-        name = f"hy {location}"
+        name = f"Hy {location}"
 
         # 创建当前网址的proxy字典
         proxy = {
@@ -152,7 +152,7 @@ def process_hysteria2(data, index):
         insecure = json_data["tls"]["insecure"]
         sni = json_data["tls"]["sni"]
         location = get_physical_location(server)
-        name = f"hy2 {location}"
+        name = f"Hy2 {location}"
 
         # 创建当前网址的proxy字典
         proxy = {
