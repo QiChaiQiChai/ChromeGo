@@ -25,7 +25,7 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: hy France
+- name: Hy France
   type: hysteria
   server: 51.158.54.46
   port: 55396
@@ -39,7 +39,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: hy United States
+- name: Hy United States
   type: hysteria
   server: 173.234.25.52
   port: 48919
@@ -53,7 +53,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: hy Taiwan
+- name: Hy Taiwan
   type: hysteria
   server: www.dtku40.xyz
   port: 18490
@@ -67,7 +67,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: hy United States
+- name: Hy United States
   type: hysteria
   server: 167.160.91.115
   port: 41189
@@ -81,7 +81,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: hy2 France
+- name: Hy2 France
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -89,7 +89,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: hy2 United States
+- name: Hy2 United States
   type: hysteria2
   server: 64.110.25.11
   port: 33337
@@ -97,7 +97,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: hy2 France
+- name: Hy2 France
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -105,7 +105,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: hy2 France
+- name: Hy2 France
   type: hysteria2
   server: 51.159.77.198
   port: 29277
@@ -119,28 +119,28 @@ proxy-groups:
   proxies:
   - 自动选择
   - DIRECT
-  - hy France
-  - hy United States
-  - hy Taiwan
-  - hy United States
-  - hy2 France
-  - hy2 United States
-  - hy2 France
-  - hy2 France
+  - Hy France
+  - Hy United States
+  - Hy Taiwan
+  - Hy United States
+  - Hy2 France
+  - Hy2 United States
+  - Hy2 France
+  - Hy2 France
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - hy France
-  - hy United States
-  - hy Taiwan
-  - hy United States
-  - hy2 France
-  - hy2 United States
-  - hy2 France
-  - hy2 France
+  - Hy France
+  - Hy United States
+  - Hy Taiwan
+  - Hy United States
+  - Hy2 France
+  - Hy2 United States
+  - Hy2 France
+  - Hy2 France
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
