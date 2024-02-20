@@ -340,7 +340,7 @@ process_urls('./urls/hysteria_urls.txt', process_hysteria)
 process_urls('./urls/hysteria2_urls.txt', process_hysteria2)
 
 # 处理 xray URLs
-process_urls('./urls/xray_urls.txt', process_xray)
+#process_urls('./urls/xray_urls.txt', process_xray)
 
 # 将结果写入文件
 merged_content = "\n".join(merged_proxies)
