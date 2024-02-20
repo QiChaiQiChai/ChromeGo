@@ -27,10 +27,26 @@ jobs:
         run: python meta_merge.py 
 
       - name: Run shadowrocket merge script
-        run: python merge.py  
+        run: python merge.py
+
+      - name: Commit Changes Firstly
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Changes detected in the repository."
+            git config core.ignorecase false
+            git config --local user.email "actions@github.com"
+            git config --local user.name "GitHub Action"
+            git add .
+            git commit -m "Updated at $(date '+%Y-%m-%d %H:%M:%S')"
+            git push
+          else
+            echo "No changes detected in the repository."
+          fi
+
       - name: Run sb script
-        run: python sb.py  
-      - name: Commit Changes
+        run: python sb.py
+
+      - name: Commit Changes Secondly
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then
             echo "Changes detected in the repository."
