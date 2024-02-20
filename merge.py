@@ -112,7 +112,7 @@ def process_clash(data, index):
                     congestion = proxy.get("congestion-controller", "bbr")
                     alpn = proxy.get("alpn", [])[0] if proxy.get("alpn") and len(proxy["alpn"]) > 0 else None
                     location = get_physical_location(server)
-                    name = f"{location}_tuic_{index}"
+                    name = f"{location}_tuic"
                     #tuic_meta_neko = f"tuic://{server}:{port}?uuid={uuid}&version=5&password={password}&insecure={insecure}&alpn={alpn}&mode={udp_relay_mode}"
                     tuic_meta = f"tuic://{uuid}:{password}@{server}:{port}?sni={sni}&congestion_control={congestion}&udp_relay_mode={udp_relay_mode}&alpn={alpn}&allow_insecure={insecure}#{name}"
                     merged_proxies.append(tuic_meta)
@@ -126,7 +126,7 @@ def process_clash(data, index):
                     sni = proxy.get("sni", "")
                     insecure = int(proxy.get("skip-cert-verify", 0))
                     location = get_physical_location(server)
-                    name = f"{location}_hysteria2_{index}"
+                    name = f"{location}_hysteria2"
                     hysteria2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}&obfs={obfs}&obfs-password={obfs_password}#{name}"
                     merged_proxies.append(hysteria2_meta)
 
@@ -145,7 +145,7 @@ def process_clash(data, index):
                     auth = proxy.get("auth-str", "")
                     # 生成URL
                     location = get_physical_location(server)
-                    name = f"{location}_hysteria_{index}"
+                    name = f"{location}_hysteria"
                     hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={ports}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
                     merged_proxies.append(hysteria_meta)
 
