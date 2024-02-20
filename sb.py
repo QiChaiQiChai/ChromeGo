@@ -1,7 +1,7 @@
 import requests
 import os
 
-url = "https://sing-box-subscribe-doraemon.vercel.app/config/https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/shadowrocket_base64.txt&file=https://raw.githubusercontent.com/QiChaiQiChai/sing-box-subscribe_configs/main/1.json"
+url = "https://sing-box-subscribe-doraemon.vercel.app/config/https://raw.githubusercontent.com/QiChaiQiChai/ChromeGo/main/sub/base64.txt&file=https://raw.githubusercontent.com/QiChaiQiChai/sing-box-subscribe_configs/main/1.json"
 output_folder = "sub"
 output_filename = "sing-box.json"
 
