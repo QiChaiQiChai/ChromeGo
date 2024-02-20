@@ -95,36 +95,36 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "🇹🇼 Taiwan_hysteria",
-        "🇫🇷 France_hysteria2",
-        "🇺🇸 United States_hysteria2",
-        "🇹🇼 Taiwan_hysteria 2",
-        "🇫🇷 France_hysteria",
-        "🇺🇸 United States_hysteria",
-        "🇹🇼 Taiwan_hysteria 3",
-        "🇺🇸 United States_hysteria 4",
-        "🇫🇷 France_hysteria2 5",
-        "🇺🇸 United States_hysteria2 6",
-        "🇫🇷 France_hysteria2 7",
-        "🇫🇷 France_hysteria2 8"
+        "🇹🇼 Hy Taiwan",
+        "🇫🇷 Hy2 France",
+        "🇺🇸 Hy2 United States",
+        "🇹🇼 Hy Taiwan 2",
+        "🇫🇷 Hy France",
+        "🇺🇸 Hy United States",
+        "🇹🇼 Hy Taiwan 3",
+        "🇺🇸 Hy United States 4",
+        "🇫🇷 Hy2 France 5",
+        "🇺🇸 Hy2 United States 6",
+        "🇫🇷 Hy2 France 7",
+        "🇫🇷 Hy2 France 8"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "🇹🇼 Taiwan_hysteria",
-        "🇫🇷 France_hysteria2",
-        "🇺🇸 United States_hysteria2",
-        "🇹🇼 Taiwan_hysteria 2",
-        "🇫🇷 France_hysteria",
-        "🇺🇸 United States_hysteria",
-        "🇹🇼 Taiwan_hysteria 3",
-        "🇺🇸 United States_hysteria 4",
-        "🇫🇷 France_hysteria2 5",
-        "🇺🇸 United States_hysteria2 6",
-        "🇫🇷 France_hysteria2 7",
-        "🇫🇷 France_hysteria2 8"
+        "🇹🇼 Hy Taiwan",
+        "🇫🇷 Hy2 France",
+        "🇺🇸 Hy2 United States",
+        "🇹🇼 Hy Taiwan 2",
+        "🇫🇷 Hy France",
+        "🇺🇸 Hy United States",
+        "🇹🇼 Hy Taiwan 3",
+        "🇺🇸 Hy United States 4",
+        "🇫🇷 Hy2 France 5",
+        "🇺🇸 Hy2 United States 6",
+        "🇫🇷 Hy2 France 7",
+        "🇫🇷 Hy2 France 8"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -143,7 +143,7 @@
       "tag": "block"
     },
     {
-      "tag": "🇹🇼 Taiwan_hysteria",
+      "tag": "🇹🇼 Hy Taiwan",
       "type": "hysteria",
       "server": "www2.dtku48.xyz",
       "server_port": 22334,
@@ -160,7 +160,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France_hysteria2",
+      "tag": "🇫🇷 Hy2 France",
       "type": "hysteria2",
       "server": "51.159.77.153",
       "server_port": 33390,
@@ -177,7 +177,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States_hysteria2",
+      "tag": "🇺🇸 Hy2 United States",
       "type": "hysteria2",
       "server": "45.150.165.84",
       "server_port": 8881,
@@ -197,7 +197,7 @@
       }
     },
     {
-      "tag": "🇹🇼 Taiwan_hysteria 2",
+      "tag": "🇹🇼 Hy Taiwan 2",
       "type": "hysteria",
       "server": "www.dtku50.xyz",
       "server_port": 18470,
@@ -214,7 +214,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France_hysteria",
+      "tag": "🇫🇷 Hy France",
       "type": "hysteria",
       "server": "51.158.54.46",
       "server_port": 55396,
@@ -231,7 +231,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States_hysteria",
+      "tag": "🇺🇸 Hy United States",
       "type": "hysteria",
       "server": "173.234.25.52",
       "server_port": 48919,
@@ -248,7 +248,7 @@
       }
     },
     {
-      "tag": "🇹🇼 Taiwan_hysteria 3",
+      "tag": "🇹🇼 Hy Taiwan 3",
       "type": "hysteria",
       "server": "www.dtku40.xyz",
       "server_port": 18490,
@@ -265,7 +265,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States_hysteria 4",
+      "tag": "🇺🇸 Hy United States 4",
       "type": "hysteria",
       "server": "167.160.91.115",
       "server_port": 41189,
@@ -282,7 +282,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France_hysteria2 5",
+      "tag": "🇫🇷 Hy2 France 5",
       "type": "hysteria2",
       "server": "62.210.103.0",
       "server_port": 22483,
@@ -299,7 +299,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States_hysteria2 6",
+      "tag": "🇺🇸 Hy2 United States 6",
       "type": "hysteria2",
       "server": "64.110.25.11",
       "server_port": 33337,
@@ -316,7 +316,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France_hysteria2 7",
+      "tag": "🇫🇷 Hy2 France 7",
       "type": "hysteria2",
       "server": "62.210.103.0",
       "server_port": 22483,
@@ -333,7 +333,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France_hysteria2 8",
+      "tag": "🇫🇷 Hy2 France 8",
       "type": "hysteria2",
       "server": "51.159.77.198",
       "server_port": 29277,
