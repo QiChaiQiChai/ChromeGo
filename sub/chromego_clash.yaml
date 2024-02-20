@@ -25,7 +25,7 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: France_Paris
+- name: France, Paris
   type: hysteria
   server: 51.158.54.46
   port: 55396
@@ -39,7 +39,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States_Los Angeles
+- name: United States, Los Angeles
   type: hysteria
   server: 173.234.25.52
   port: 48919
@@ -53,7 +53,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Taiwan_Taipei
+- name: Taiwan, Taipei
   type: hysteria
   server: www.dtku40.xyz
   port: 18490
@@ -67,7 +67,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States_Los Angeles
+- name: United States, Los Angeles
   type: hysteria
   server: 167.160.91.115
   port: 41189
@@ -81,7 +81,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: France_Neuilly-sur-Seine
+- name: France, Neuilly-sur-Seine
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -89,7 +89,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: United States_Los Angeles
+- name: United States, Los Angeles
   type: hysteria2
   server: 64.110.25.11
   port: 33337
@@ -97,7 +97,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France_Neuilly-sur-Seine
+- name: France, Neuilly-sur-Seine
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -105,7 +105,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France_Paris
+- name: France, Paris
   type: hysteria2
   server: 51.159.77.198
   port: 29277
@@ -119,28 +119,28 @@ proxy-groups:
   proxies:
   - 自动选择
   - DIRECT
-  - France_Paris
-  - United States_Los Angeles
-  - Taiwan_Taipei
-  - United States_Los Angeles
-  - France_Neuilly-sur-Seine
-  - United States_Los Angeles
-  - France_Neuilly-sur-Seine
-  - France_Paris
+  - France, Paris
+  - United States, Los Angeles
+  - Taiwan, Taipei
+  - United States, Los Angeles
+  - France, Neuilly-sur-Seine
+  - United States, Los Angeles
+  - France, Neuilly-sur-Seine
+  - France, Paris
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - France_Paris
-  - United States_Los Angeles
-  - Taiwan_Taipei
-  - United States_Los Angeles
-  - France_Neuilly-sur-Seine
-  - United States_Los Angeles
-  - France_Neuilly-sur-Seine
-  - France_Paris
+  - France, Paris
+  - United States, Los Angeles
+  - Taiwan, Taipei
+  - United States, Los Angeles
+  - France, Neuilly-sur-Seine
+  - United States, Los Angeles
+  - France, Neuilly-sur-Seine
+  - France, Paris
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
