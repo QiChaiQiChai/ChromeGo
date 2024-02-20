@@ -278,7 +278,7 @@ process_urls('./urls/hysteria_urls.txt', process_hysteria)
 process_urls('./urls/hysteria2_urls.txt', process_hysteria2)
 
 # 处理 xray URLs
-process_urls('./urls/xray_urls.txt', process_xray)
+#process_urls('./urls/xray_urls.txt', process_xray)
 
 # 读取普通的配置文件内容
 with open('./templates/clash_template.yaml', 'r', encoding='utf-8') as file:
