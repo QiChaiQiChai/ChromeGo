@@ -11110,34 +11110,6 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France_reality_2
-  type: vless
-  server: 62.210.101.0
-  port: 18700
-  uuid: e659661d-8439-46e0-b1ab-d75ceaf73404
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: update.microsoft
-  reality-opts:
-    public-key: PBRc2v9SSXpG4jjQRYNa-kgs8w9V4U3MNLuncd2d0hw
-    short-id: 6ba85179e30d4fc2
-- name: France_reality_3
-  type: vless
-  server: 62.210.101.0
-  port: 18700
-  uuid: e659661d-8439-46e0-b1ab-d75ceaf73404
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: update.microsoft
-  reality-opts:
-    public-key: PBRc2v9SSXpG4jjQRYNa-kgs8w9V4U3MNLuncd2d0hw
-    short-id: 6ba85179e30d4fc2
 proxy-groups:
 - name: 节点选择
   type: select
@@ -11909,8 +11881,6 @@ proxy-groups:
   - United States_hysteria2_1
   - France_hysteria2_2
   - France_hysteria2_3
-  - France_reality_2
-  - France_reality_3
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -12682,8 +12652,6 @@ proxy-groups:
   - United States_hysteria2_1
   - France_hysteria2_2
   - France_hysteria2_3
-  - France_reality_2
-  - France_reality_3
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
