@@ -101,12 +101,12 @@
         "🇹🇼 Taiwan, New Taipei 2",
         "🇫🇷 France, Paris 3",
         "🇺🇸 United States, Los Angeles",
-        "🇹🇼 Taiwan, Taipei",
-        "🇺🇸 United States, Los Angeles 4",
-        "🇫🇷 France, Neuilly-sur-Seine",
+        "🇹🇼 Taiwan, New Taipei 4",
         "🇺🇸 United States, Los Angeles 5",
-        "🇫🇷 France, Neuilly-sur-Seine 6",
-        "🇫🇷 France, Paris 7"
+        "🇫🇷 France, Neuilly-sur-Seine",
+        "🇺🇸 United States, Los Angeles 6",
+        "🇫🇷 France, Neuilly-sur-Seine 7",
+        "🇫🇷 France, Paris 8"
       ]
     },
     {
@@ -119,12 +119,12 @@
         "🇹🇼 Taiwan, New Taipei 2",
         "🇫🇷 France, Paris 3",
         "🇺🇸 United States, Los Angeles",
-        "🇹🇼 Taiwan, Taipei",
-        "🇺🇸 United States, Los Angeles 4",
-        "🇫🇷 France, Neuilly-sur-Seine",
+        "🇹🇼 Taiwan, New Taipei 4",
         "🇺🇸 United States, Los Angeles 5",
-        "🇫🇷 France, Neuilly-sur-Seine 6",
-        "🇫🇷 France, Paris 7"
+        "🇫🇷 France, Neuilly-sur-Seine",
+        "🇺🇸 United States, Los Angeles 6",
+        "🇫🇷 France, Neuilly-sur-Seine 7",
+        "🇫🇷 France, Paris 8"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -248,7 +248,7 @@
       }
     },
     {
-      "tag": "🇹🇼 Taiwan, Taipei",
+      "tag": "🇹🇼 Taiwan, New Taipei 4",
       "type": "hysteria",
       "server": "www.dtku40.xyz",
       "server_port": 18490,
@@ -265,7 +265,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States, Los Angeles 4",
+      "tag": "🇺🇸 United States, Los Angeles 5",
       "type": "hysteria",
       "server": "167.160.91.115",
       "server_port": 41189,
@@ -299,7 +299,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States, Los Angeles 5",
+      "tag": "🇺🇸 United States, Los Angeles 6",
       "type": "hysteria2",
       "server": "64.110.25.11",
       "server_port": 33337,
@@ -316,7 +316,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France, Neuilly-sur-Seine 6",
+      "tag": "🇫🇷 France, Neuilly-sur-Seine 7",
       "type": "hysteria2",
       "server": "62.210.103.0",
       "server_port": 22483,
@@ -333,7 +333,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France, Paris 7",
+      "tag": "🇫🇷 France, Paris 8",
       "type": "hysteria2",
       "server": "51.159.77.198",
       "server_port": 29277,
