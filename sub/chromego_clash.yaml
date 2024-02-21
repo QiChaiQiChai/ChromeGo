@@ -53,7 +53,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Taiwan, Taipei
+- name: Taiwan, New Taipei
   type: hysteria
   server: www.dtku40.xyz
   port: 18490
@@ -121,7 +121,7 @@ proxy-groups:
   - DIRECT
   - France, Paris
   - United States, Los Angeles
-  - Taiwan, Taipei
+  - Taiwan, New Taipei
   - United States, Los Angeles
   - France, Neuilly-sur-Seine
   - United States, Los Angeles
@@ -135,7 +135,7 @@ proxy-groups:
   proxies:
   - France, Paris
   - United States, Los Angeles
-  - Taiwan, Taipei
+  - Taiwan, New Taipei
   - United States, Los Angeles
   - France, Neuilly-sur-Seine
   - United States, Los Angeles
