@@ -47,7 +47,10 @@ def process_clash(data, index):
 
             # 提取proxies部分并合并到merged_proxies中
             proxies = content.get('proxies', [])
-            
+    
+            # 声明 name_counter 变量为全局变量
+            global name_counter
+    
             for proxy in proxies:
                 # # 如果类型是vless
                 # if proxy['type'] == 'vless' :
@@ -127,6 +130,17 @@ def process_clash(data, index):
                     insecure = int(proxy.get("skip-cert-verify", 0))
                     location = get_physical_location(server)
                     name = f"{location}"
+                    
+                    # Count occurrences of the same name
+                    if name in name_counter:
+                        name_counter[name] += 1
+                    else:
+                        name_counter[name] = 1
+                    
+                    # Append index number only if name is not unique
+                    if name_counter[name] > 1:
+                        name += f"_{name_counter[name]}"
+                    
                     hysteria2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}&obfs={obfs}&obfs-password={obfs_password}#{name}"
                     merged_proxies.append(hysteria2_meta)
 
@@ -146,6 +160,17 @@ def process_clash(data, index):
                     # 生成URL
                     location = get_physical_location(server)
                     name = f"{location}"
+
+                    # Count occurrences of the same name
+                    if name in name_counter:
+                        name_counter[name] += 1
+                    else:
+                        name_counter[name] = 1
+                    
+                    # Append index number only if name is not unique
+                    if name_counter[name] > 1:
+                        name += f"_{name_counter[name]}"
+                    
                     hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={ports}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
                     merged_proxies.append(hysteria_meta)
 
@@ -214,6 +239,8 @@ def process_sb(data, index):
         logging.error(f"Error processing shadowtls data for index {index}: {e}")
 #hysteria
 def process_hysteria(data, index):
+    # 声明 name_counter 变量为全局变量
+    global name_counter
     try:
         json_data = json.loads(data)
         # 处理 hysteria 数据
@@ -231,6 +258,17 @@ def process_hysteria(data, index):
         # 生成URL
         location = get_physical_location(server)
         name = f"{location}"
+
+        # Count occurrences of the same name
+        if name in name_counter:
+            name_counter[name] += 1
+        else:
+            name_counter[name] = 1
+        
+        # Append index number only if name is not unique
+        if name_counter[name] > 1:
+            name += f"_{name_counter[name]}"
+
         hysteria = f"hysteria://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
         merged_proxies.append(hysteria)
 
@@ -239,6 +277,8 @@ def process_hysteria(data, index):
         logging.error(f"Error processing hysteria data for index {index}: {e}")
 # 处理hysteria2
 def process_hysteria2(data, index):
+    # 声明 name_counter 变量为全局变量
+    global name_counter
     try:
         json_data = json.loads(data)
         # 处理 hysteria2 数据
@@ -250,6 +290,17 @@ def process_hysteria2(data, index):
         # 生成URL
         location = get_physical_location(server)
         name = f"{location}"
+
+        # Count occurrences of the same name
+        if name in name_counter:
+            name_counter[name] += 1
+        else:
+            name_counter[name] = 1
+        
+        # Append index number only if name is not unique
+        if name_counter[name] > 1:
+            name += f"_{name_counter[name]}"
+
         hysteria2 = f"hysteria2://{auth}@{server}?insecure={insecure}&sni={sni}#{name}"
 
         merged_proxies.append(hysteria2)
@@ -320,6 +371,9 @@ def process_xray(data, index):
             merged_proxies.append(xray_proxy)
     except Exception as e:
         logging.error(f"Error processing xray data for index {index}: {e}")
+
+# Define name_counter outside the function
+name_counter = {}
 
 # 定义一个空列表用于存储合并后的代理配置
 merged_proxies = []
