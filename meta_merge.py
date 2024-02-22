@@ -22,12 +22,24 @@ def process_urls(url_file, processor):
         logging.error(f"Error reading file {url_file}: {e}")
 #提取clash节点
 def process_clash(data, index):
+    global name_counter  # Declare name_counter as global variable
     content = yaml.safe_load(data)
     proxies = content.get('proxies', [])
     for i, proxy in enumerate(proxies):
         if proxy.get('type') in ['tuic', 'hysteria', 'hysteria2']:
             location = get_physical_location(proxy['server'])
             proxy['name'] = f"{location}"
+            
+            # Check if the name already exists in name_counter
+            if proxy_name in name_counter:
+                name_counter[proxy['name']] += 1
+            else:
+                name_counter[proxy['name']] = 1
+            
+            # Append index number only if name is not unique
+            if name_counter[proxy['name']] > 1:
+                proxy_name += f"_{name_counter[proxy['name']]}"
+
             merged_proxies.append(proxy)
 
 def get_physical_location(address):
@@ -89,6 +101,7 @@ def process_sb(data, index):
         logging.error(f"Error processing shadowtls data for index {index}: {e}")
 
 def process_hysteria(data, index):
+    global name_counter  # Declare name_counter as global variable
     try:
         json_data = json.loads(data)
         # 处理 hysteria 数据
@@ -112,6 +125,16 @@ def process_hysteria(data, index):
         protocol = json_data["protocol"]
         location = get_physical_location(server)
         name = f"{location}"
+
+        # Count occurrences of the same name
+        if name in name_counter:
+            name_counter[name] += 1
+        else:
+            name_counter[name] = 1
+        
+        # Append index number only if name is not unique
+        if name_counter[name] > 1:
+            name += f"_{name_counter[name]}"
 
         # 创建当前网址的proxy字典
         proxy = {
@@ -137,6 +160,7 @@ def process_hysteria(data, index):
         logging.error(f"Error processing hysteria data for index {index}: {e}")
 # 处理hysteria2
 def process_hysteria2(data, index):
+    global name_counter  # Declare name_counter as global variable
     try:
         json_data = json.loads(data)
         # 处理 hysteria2 数据
@@ -154,6 +178,16 @@ def process_hysteria2(data, index):
         sni = json_data["tls"]["sni"]
         location = get_physical_location(server)
         name = f"{location}"
+
+        # Count occurrences of the same name
+        if name in name_counter:
+            name_counter[name] += 1
+        else:
+            name_counter[name] = 1
+        
+        # Append index number only if name is not unique
+        if name_counter[name] > 1:
+            name += f"_{name_counter[name]}"
 
         # 创建当前网址的proxy字典
         proxy = {
@@ -262,6 +296,9 @@ def update_warp_proxy_groups(config_warp_data, merged_proxies):
                 group['proxies'] = [proxy['name'] for proxy in merged_proxies]
             else:
                 group['proxies'].extend(proxy['name'] for proxy in merged_proxies)
+
+# Define name_counter outside the function
+name_counter = {}
 
 # 包含hysteria2
 merged_proxies = []
