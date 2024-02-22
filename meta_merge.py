@@ -25,9 +25,10 @@ def process_clash(data, index):
     content = yaml.safe_load(data)
     proxies = content.get('proxies', [])
     for i, proxy in enumerate(proxies):
-        location = get_physical_location(proxy['server'])
-        proxy['name'] = f"{location}_{proxy['type']}_{index}{i+1}"
-    merged_proxies.extend(proxies)
+        if proxy.get('type') in ['tuic', 'hysteria', 'hysteria2']:
+            location = get_physical_location(proxy['server'])
+            proxy['name'] = f"{location}"
+            merged_proxies.append(proxy)
 
 def get_physical_location(address):
     address = re.sub(':.*', '', address)  # 用正则表达式去除端口部分
@@ -41,8 +42,8 @@ def get_physical_location(address):
         response = reader.city(ip_address)
         country = response.country.name
         city = response.city.name
-        return f"{country}, {city}"
-        #return f"{country}"
+        #return f"{country}, {city}"
+        return f"{country}"
         #return f"油管绵阿羊_{country}"
     except geoip2.errors.AddressNotFoundError as e:
         print(f"Error: {e}")
@@ -266,7 +267,7 @@ def update_warp_proxy_groups(config_warp_data, merged_proxies):
 merged_proxies = []
 
 # 处理 clash URLs
-#process_urls('./urls/clash_urls.txt', process_clash)
+process_urls('./urls/clash_urls.txt', process_clash)
 
 # 处理 shadowtls URLs
 #process_urls('./urls/sb_urls.txt', process_sb)
