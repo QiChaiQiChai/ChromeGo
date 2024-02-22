@@ -38,7 +38,7 @@ def process_clash(data, index):
             
             # Append index number only if name is not unique
             if name_counter[proxy['name']] > 1:
-                proxy_name += f"_{name_counter[proxy['name']]}"
+                proxy['name'] += f" {name_counter[proxy['name']]}"
 
             merged_proxies.append(proxy)
 
@@ -134,7 +134,7 @@ def process_hysteria(data, index):
         
         # Append index number only if name is not unique
         if name_counter[name] > 1:
-            name += f"_{name_counter[name]}"
+            name += f" {name_counter[name]}"
 
         # 创建当前网址的proxy字典
         proxy = {
@@ -187,7 +187,7 @@ def process_hysteria2(data, index):
         
         # Append index number only if name is not unique
         if name_counter[name] > 1:
-            name += f"_{name_counter[name]}"
+            name += f" {name_counter[name]}"
 
         # 创建当前网址的proxy字典
         proxy = {
