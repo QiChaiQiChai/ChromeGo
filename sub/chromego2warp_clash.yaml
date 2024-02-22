@@ -83,7 +83,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States_2
+- name: United States 2
   type: hysteria
   server: 167.160.91.115
   port: 41189
@@ -97,7 +97,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: France_2
+- name: France 2
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -105,7 +105,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: United States_3
+- name: United States 3
   type: hysteria2
   server: 64.110.25.11
   port: 33337
@@ -113,7 +113,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France_3
+- name: France 3
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -121,7 +121,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France_4
+- name: France 4
   type: hysteria2
   server: 51.159.77.198
   port: 29277
@@ -153,33 +153,33 @@ proxy-groups:
   - France
   - United States
   - Taiwan
-  - United States_2
-  - France_2
-  - United States_3
-  - France_3
-  - France_4
+  - United States 2
+  - France 2
+  - United States 3
+  - France 3
+  - France 4
 - name: 手动选择
   type: select
   proxies:
   - France
   - United States
   - Taiwan
-  - United States_2
-  - France_2
-  - United States_3
-  - France_3
-  - France_4
+  - United States 2
+  - France 2
+  - United States 3
+  - France 3
+  - France 4
 - name: 负载均衡
   type: load-balance
   proxies:
   - France
   - United States
   - Taiwan
-  - United States_2
-  - France_2
-  - United States_3
-  - France_3
-  - France_4
+  - United States 2
+  - France 2
+  - United States 3
+  - France 3
+  - France 4
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
