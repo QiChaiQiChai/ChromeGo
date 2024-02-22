@@ -31,7 +31,7 @@ def process_clash(data, index):
             proxy['name'] = f"{location}"
             
             # Check if the name already exists in name_counter
-            if proxy_name in name_counter:
+            if proxy['name'] in name_counter:
                 name_counter[proxy['name']] += 1
             else:
                 name_counter[proxy['name']] = 1
