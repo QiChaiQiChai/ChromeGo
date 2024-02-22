@@ -139,7 +139,7 @@ def process_clash(data, index):
                     
                     # Append index number only if name is not unique
                     if name_counter[name] > 1:
-                        name += f"_{name_counter[name]}"
+                        name += f" {name_counter[name]}"
                     
                     hysteria2_meta = f"hysteria2://{auth}@{server}:{port}?insecure={insecure}&sni={sni}&obfs={obfs}&obfs-password={obfs_password}#{name}"
                     merged_proxies.append(hysteria2_meta)
@@ -169,7 +169,7 @@ def process_clash(data, index):
                     
                     # Append index number only if name is not unique
                     if name_counter[name] > 1:
-                        name += f"_{name_counter[name]}"
+                        name += f" {name_counter[name]}"
                     
                     hysteria_meta = f"hysteria://{server}:{port}?peer={sni}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&mport={ports}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
                     merged_proxies.append(hysteria_meta)
@@ -267,7 +267,7 @@ def process_hysteria(data, index):
         
         # Append index number only if name is not unique
         if name_counter[name] > 1:
-            name += f"_{name_counter[name]}"
+            name += f" {name_counter[name]}"
 
         hysteria = f"hysteria://{server}?peer={server_name}&auth={auth}&insecure={insecure}&upmbps={up_mbps}&downmbps={down_mbps}&alpn={alpn}&obfs={obfs}&protocol={protocol}&fastopen={fast_open}#{name}"
         merged_proxies.append(hysteria)
@@ -299,7 +299,7 @@ def process_hysteria2(data, index):
         
         # Append index number only if name is not unique
         if name_counter[name] > 1:
-            name += f"_{name_counter[name]}"
+            name += f" {name_counter[name]}"
 
         hysteria2 = f"hysteria2://{auth}@{server}?insecure={insecure}&sni={sni}#{name}"
 
