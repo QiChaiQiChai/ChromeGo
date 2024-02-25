@@ -97,14 +97,13 @@
         "auto",
         "🇹🇼 Taiwan",
         "🇫🇷 France",
-        "🇺🇸 United States",
         "🇹🇼 Taiwan 2",
         "🇫🇷 France 2",
-        "🇺🇸 United States 2",
+        "🇺🇸 United States",
         "🇹🇼 Taiwan 3",
-        "🇺🇸 United States 3",
+        "🇺🇸 United States 2",
         "🇫🇷 France 3",
-        "🇺🇸 United States 4",
+        "🇺🇸 United States 3",
         "🇫🇷 France 4",
         "🇫🇷 France 5"
       ]
@@ -115,14 +114,13 @@
       "outbounds": [
         "🇹🇼 Taiwan",
         "🇫🇷 France",
-        "🇺🇸 United States",
         "🇹🇼 Taiwan 2",
         "🇫🇷 France 2",
-        "🇺🇸 United States 2",
+        "🇺🇸 United States",
         "🇹🇼 Taiwan 3",
-        "🇺🇸 United States 3",
+        "🇺🇸 United States 2",
         "🇫🇷 France 3",
-        "🇺🇸 United States 4",
+        "🇺🇸 United States 3",
         "🇫🇷 France 4",
         "🇫🇷 France 5"
       ],
@@ -177,26 +175,6 @@
       }
     },
     {
-      "tag": "🇺🇸 United States",
-      "type": "hysteria2",
-      "server": "45.150.165.84",
-      "server_port": 8881,
-      "password": "d017e316-82cb-441c-8eea-7b5e9de64a20",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "d017e316-82cb-441c-8eea-7b5e9de64a20"
-      }
-    },
-    {
       "tag": "🇹🇼 Taiwan 2",
       "type": "hysteria",
       "server": "www.dtku50.xyz",
@@ -231,7 +209,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 2",
+      "tag": "🇺🇸 United States",
       "type": "hysteria",
       "server": "173.234.25.52",
       "server_port": 48919,
@@ -265,7 +243,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 3",
+      "tag": "🇺🇸 United States 2",
       "type": "hysteria",
       "server": "167.160.91.115",
       "server_port": 41189,
@@ -299,7 +277,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 4",
+      "tag": "🇺🇸 United States 3",
       "type": "hysteria2",
       "server": "64.110.25.11",
       "server_port": 33337,
