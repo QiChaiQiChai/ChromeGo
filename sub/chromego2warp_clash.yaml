@@ -63,16 +63,6 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: United States
-  type: hysteria2
-  server: 45.150.165.84
-  port: 8881
-  password: d017e316-82cb-441c-8eea-7b5e9de64a20
-  obfs: salamander
-  obfs-password: d017e316-82cb-441c-8eea-7b5e9de64a20
-  skip-cert-verify: true
-  up: 2 Mbps
-  down: 10 Mbps
 - name: Taiwan 2
   type: hysteria
   server: www.dtku50.xyz
@@ -99,7 +89,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 2
+- name: United States
   type: hysteria
   server: 173.234.25.52
   port: 48919
@@ -127,7 +117,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 3
+- name: United States 2
   type: hysteria
   server: 167.160.91.115
   port: 41189
@@ -149,7 +139,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: United States 4
+- name: United States 3
   type: hysteria2
   server: 64.110.25.11
   port: 33337
@@ -196,14 +186,13 @@ proxy-groups:
   proxies:
   - Taiwan
   - France
-  - United States
   - Taiwan 2
   - France 2
-  - United States 2
+  - United States
   - Taiwan 3
-  - United States 3
+  - United States 2
   - France 3
-  - United States 4
+  - United States 3
   - France 4
   - France 5
 - name: 手动选择
@@ -211,14 +200,13 @@ proxy-groups:
   proxies:
   - Taiwan
   - France
-  - United States
   - Taiwan 2
   - France 2
-  - United States 2
+  - United States
   - Taiwan 3
-  - United States 3
+  - United States 2
   - France 3
-  - United States 4
+  - United States 3
   - France 4
   - France 5
 - name: 负载均衡
@@ -226,14 +214,13 @@ proxy-groups:
   proxies:
   - Taiwan
   - France
-  - United States
   - Taiwan 2
   - France 2
-  - United States 2
+  - United States
   - Taiwan 3
-  - United States 3
+  - United States 2
   - France 3
-  - United States 4
+  - United States 3
   - France 4
   - France 5
   url: http://www.gstatic.com/generate_204
