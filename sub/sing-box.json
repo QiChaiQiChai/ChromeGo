@@ -151,10 +151,10 @@
       "tls": {
         "enabled": true,
         "server_name": "",
+        "insecure": true,
         "alpn": [
           "h3"
-        ],
-        "insecure": true
+        ]
       }
     },
     {
@@ -185,10 +185,10 @@
       "tls": {
         "enabled": true,
         "server_name": "www.amazon.cn",
+        "insecure": true,
         "alpn": [
           "h3"
-        ],
-        "insecure": true
+        ]
       }
     },
     {
@@ -202,10 +202,10 @@
       "tls": {
         "enabled": true,
         "server_name": "youku.com",
+        "insecure": true,
         "alpn": [
           "h3"
-        ],
-        "insecure": true
+        ]
       }
     },
     {
@@ -219,10 +219,10 @@
       "tls": {
         "enabled": true,
         "server_name": "bing.com",
+        "insecure": true,
         "alpn": [
           "h3"
-        ],
-        "insecure": true
+        ]
       }
     },
     {
@@ -236,10 +236,10 @@
       "tls": {
         "enabled": true,
         "server_name": "bing.com",
+        "insecure": true,
         "alpn": [
           "h3"
-        ],
-        "insecure": true
+        ]
       }
     },
     {
@@ -253,10 +253,10 @@
       "tls": {
         "enabled": true,
         "server_name": "www.amazon.cn",
+        "insecure": true,
         "alpn": [
           "h3"
-        ],
-        "insecure": true
+        ]
       }
     },
     {
