@@ -41,12 +41,8 @@ proxies:
   server: 51.159.77.153
   port: 33390
   password: dongtaiwang.com
-  alpn:
-  - h3
   sni: bing.com
   skip-cert-verify: true
-  up: 11 Mbps
-  down: 55 Mbps
 - name: Taiwan 2
   type: hysteria
   server: www.dtku50.xyz
