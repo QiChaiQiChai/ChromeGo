@@ -142,7 +142,7 @@ proxies:
 - name: France 5
   type: hysteria2
   server: 51.159.77.198
-  port: 29277
+  port: 53967
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
