@@ -36,14 +36,14 @@ proxies:
   up: 11 Mbps
   down: 55 Mbps
   skip-cert-verify: true
-- name: France
+- name: United States
   type: hysteria2
-  server: 51.159.77.153
-  port: 44190
+  server: 109.104.152.89
+  port: 22441
   password: dongtaiwang.com
   alpn:
   - h3
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
@@ -59,21 +59,21 @@ proxies:
   auth_str: dongtaiwang.com
   up: 2
   down: 10
-- name: France 2
+- name: United States 2
   type: hysteria
-  server: 51.158.54.46
-  port: 55396
-  ports: 55396
+  server: 108.181.5.133
+  port: 26022
+  ports: 26022
   auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: youku.com
+  sni: bing.com
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States
+- name: United States 3
   type: hysteria
   server: 173.234.25.52
   port: 48919
@@ -101,7 +101,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 2
+- name: United States 4
   type: hysteria
   server: 167.160.91.115
   port: 41189
@@ -115,31 +115,31 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: France
+  type: hysteria2
+  server: 62.210.103.0
+  port: 22483
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: United States 5
+  type: hysteria2
+  server: 104.192.224.140
+  port: 40391
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: France 2
+  type: hysteria2
+  server: 62.210.103.0
+  port: 22483
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - name: France 3
-  type: hysteria2
-  server: 62.210.103.0
-  port: 22483
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: United States 3
-  type: hysteria2
-  server: 64.110.25.11
-  port: 33337
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: France 4
-  type: hysteria2
-  server: 62.210.103.0
-  port: 22483
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: France 5
   type: hysteria2
   server: 51.159.77.198
   port: 53967
@@ -154,16 +154,16 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - Taiwan
-  - France
-  - Taiwan 2
-  - France 2
   - United States
-  - Taiwan 3
+  - Taiwan 2
   - United States 2
-  - France 3
   - United States 3
-  - France 4
-  - France 5
+  - Taiwan 3
+  - United States 4
+  - France
+  - United States 5
+  - France 2
+  - France 3
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -171,16 +171,16 @@ proxy-groups:
   tolerance: 50
   proxies:
   - Taiwan
-  - France
-  - Taiwan 2
-  - France 2
   - United States
-  - Taiwan 3
+  - Taiwan 2
   - United States 2
-  - France 3
   - United States 3
-  - France 4
-  - France 5
+  - Taiwan 3
+  - United States 4
+  - France
+  - United States 5
+  - France 2
+  - France 3
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
