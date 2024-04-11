@@ -98,10 +98,10 @@
         "🇺🇸 United States",
         "🇺🇸 United States 2",
         "🇺🇸 United States 3",
-        "🇺🇸 United States 4",
-        "🇹🇼 Taiwan",
-        "🇺🇸 United States 5",
         "🇫🇷 France",
+        "🇹🇼 Taiwan",
+        "🇺🇸 United States 4",
+        "🇺🇸 United States 5",
         "🇺🇸 United States 6",
         "🇫🇷 France 2",
         "🇫🇷 France 3"
@@ -114,10 +114,10 @@
         "🇺🇸 United States",
         "🇺🇸 United States 2",
         "🇺🇸 United States 3",
-        "🇺🇸 United States 4",
-        "🇹🇼 Taiwan",
-        "🇺🇸 United States 5",
         "🇫🇷 France",
+        "🇹🇼 Taiwan",
+        "🇺🇸 United States 4",
+        "🇺🇸 United States 5",
         "🇺🇸 United States 6",
         "🇫🇷 France 2",
         "🇫🇷 France 3"
@@ -190,10 +190,10 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 4",
+      "tag": "🇫🇷 France",
       "type": "hysteria",
-      "server": "173.234.25.52",
-      "server_port": 48919,
+      "server": "62.210.243.131",
+      "server_port": 18702,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -224,16 +224,16 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 5",
+      "tag": "🇺🇸 United States 4",
       "type": "hysteria",
-      "server": "167.160.91.115",
-      "server_port": 41189,
+      "server": "109.104.152.194",
+      "server_port": 58510,
       "up_mbps": 11,
       "down_mbps": 55,
-      "auth_str": "bWAwIqINo7XDm1fUlXQGBifVIXoYs1ylgVKqWFKzK1XyDKuwNF",
+      "auth_str": "dongtaiwang.com",
       "tls": {
         "enabled": true,
-        "server_name": "www.amazon.cn",
+        "server_name": "bing.com",
         "insecure": true,
         "alpn": [
           "h3"
@@ -241,10 +241,10 @@
       }
     },
     {
-      "tag": "🇫🇷 France",
+      "tag": "🇺🇸 United States 5",
       "type": "hysteria2",
-      "server": "62.210.103.0",
-      "server_port": 22483,
+      "server": "109.104.152.194",
+      "server_port": 20352,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
