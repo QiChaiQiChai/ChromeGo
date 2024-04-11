@@ -77,11 +77,11 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 4
+- name: France
   type: hysteria
-  server: 173.234.25.52
-  port: 48919
-  ports: 48919
+  server: 62.210.243.131
+  port: 18702
+  ports: 18702
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -105,11 +105,11 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 5
+- name: United States 4
   type: hysteria
   server: 109.104.152.194
-  port: 25304
-  ports: 47000-48000
+  port: 58510
+  ports: 58510
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -119,7 +119,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 6
+- name: United States 5
   type: hysteria2
   server: 109.104.152.194
   port: 20352
@@ -127,7 +127,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: United States 7
+- name: United States 6
   type: hysteria2
   server: 104.192.224.140
   port: 40391
@@ -135,7 +135,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France
+- name: France 2
   type: hysteria2
   server: 62.210.103.0
   port: 22483
@@ -143,7 +143,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France 2
+- name: France 3
   type: hysteria2
   server: 51.159.77.198
   port: 53967
@@ -175,39 +175,39 @@ proxy-groups:
   - United States
   - United States 2
   - United States 3
-  - United States 4
+  - France
   - Taiwan
+  - United States 4
   - United States 5
   - United States 6
-  - United States 7
-  - France
   - France 2
+  - France 3
 - name: 手动选择
   type: select
   proxies:
   - United States
   - United States 2
   - United States 3
-  - United States 4
+  - France
   - Taiwan
+  - United States 4
   - United States 5
   - United States 6
-  - United States 7
-  - France
   - France 2
+  - France 3
 - name: 负载均衡
   type: load-balance
   proxies:
   - United States
   - United States 2
   - United States 3
-  - United States 4
+  - France
   - Taiwan
+  - United States 4
   - United States 5
   - United States 6
-  - United States 7
-  - France
   - France 2
+  - France 3
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
