@@ -107,18 +107,34 @@ proxies:
   - h3
 - name: United States 5
   type: hysteria
-  server: 167.160.91.115
-  port: 41189
-  ports: 41189
-  auth_str: bWAwIqINo7XDm1fUlXQGBifVIXoYs1ylgVKqWFKzK1XyDKuwNF
+  server: 109.104.152.194
+  port: 25304
+  ports: 47000-48000
+  auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: www.amazon.cn
+  sni: bing.com
   skip-cert-verify: true
   alpn:
   - h3
+- name: United States 6
+  type: hysteria2
+  server: 109.104.152.194
+  port: 20352
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: United States 7
+  type: hysteria2
+  server: 104.192.224.140
+  port: 40391
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - name: France
   type: hysteria2
   server: 62.210.103.0
@@ -127,23 +143,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: United States 6
-  type: hysteria2
-  server: 104.192.224.140
-  port: 40391
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 - name: France 2
-  type: hysteria2
-  server: 62.210.103.0
-  port: 22483
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: France 3
   type: hysteria2
   server: 51.159.77.198
   port: 53967
@@ -178,10 +178,10 @@ proxy-groups:
   - United States 4
   - Taiwan
   - United States 5
-  - France
   - United States 6
+  - United States 7
+  - France
   - France 2
-  - France 3
 - name: 手动选择
   type: select
   proxies:
@@ -191,10 +191,10 @@ proxy-groups:
   - United States 4
   - Taiwan
   - United States 5
-  - France
   - United States 6
+  - United States 7
+  - France
   - France 2
-  - France 3
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -204,10 +204,10 @@ proxy-groups:
   - United States 4
   - Taiwan
   - United States 5
-  - France
   - United States 6
+  - United States 7
+  - France
   - France 2
-  - France 3
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
