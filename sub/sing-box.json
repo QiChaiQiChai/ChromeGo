@@ -99,12 +99,12 @@
         "🇺🇸 United States 2",
         "🇺🇸 United States 3",
         "🇫🇷 France",
-        "🇹🇼 Taiwan",
+        "🇫🇷 France 2",
         "🇺🇸 United States 4",
         "🇺🇸 United States 5",
         "🇺🇸 United States 6",
-        "🇫🇷 France 2",
-        "🇫🇷 France 3"
+        "🇺🇸 United States 7",
+        "🇺🇸 United States 8"
       ]
     },
     {
@@ -115,12 +115,12 @@
         "🇺🇸 United States 2",
         "🇺🇸 United States 3",
         "🇫🇷 France",
-        "🇹🇼 Taiwan",
+        "🇫🇷 France 2",
         "🇺🇸 United States 4",
         "🇺🇸 United States 5",
         "🇺🇸 United States 6",
-        "🇫🇷 France 2",
-        "🇫🇷 France 3"
+        "🇺🇸 United States 7",
+        "🇺🇸 United States 8"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -207,10 +207,10 @@
       }
     },
     {
-      "tag": "🇹🇼 Taiwan",
+      "tag": "🇫🇷 France 2",
       "type": "hysteria",
-      "server": "www.dtku40.xyz",
-      "server_port": 18490,
+      "server": "62.210.243.131",
+      "server_port": 18702,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -243,8 +243,8 @@
     {
       "tag": "🇺🇸 United States 5",
       "type": "hysteria2",
-      "server": "109.104.152.194",
-      "server_port": 20352,
+      "server": "104.192.224.141",
+      "server_port": 40391,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -275,10 +275,10 @@
       }
     },
     {
-      "tag": "🇫🇷 France 2",
+      "tag": "🇺🇸 United States 7",
       "type": "hysteria2",
-      "server": "62.210.103.0",
-      "server_port": 22483,
+      "server": "104.192.224.141",
+      "server_port": 40391,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -292,10 +292,10 @@
       }
     },
     {
-      "tag": "🇫🇷 France 3",
+      "tag": "🇺🇸 United States 8",
       "type": "hysteria2",
-      "server": "51.159.77.198",
-      "server_port": 53967,
+      "server": "104.192.224.141",
+      "server_port": 40391,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
