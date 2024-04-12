@@ -75,11 +75,11 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Taiwan
+- name: France 2
   type: hysteria
-  server: www.dtku40.xyz
-  port: 18490
-  ports: 18490
+  server: 62.210.243.131
+  port: 18702
+  ports: 18702
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -105,8 +105,8 @@ proxies:
   - h3
 - name: United States 5
   type: hysteria2
-  server: 109.104.152.194
-  port: 20352
+  server: 104.192.224.141
+  port: 40391
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -119,18 +119,18 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France 2
+- name: United States 7
   type: hysteria2
-  server: 62.210.103.0
-  port: 22483
+  server: 104.192.224.141
+  port: 40391
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France 3
+- name: United States 8
   type: hysteria2
-  server: 51.159.77.198
-  port: 53967
+  server: 104.192.224.141
+  port: 40391
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -145,12 +145,12 @@ proxy-groups:
   - United States 2
   - United States 3
   - France
-  - Taiwan
+  - France 2
   - United States 4
   - United States 5
   - United States 6
-  - France 2
-  - France 3
+  - United States 7
+  - United States 8
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -161,12 +161,12 @@ proxy-groups:
   - United States 2
   - United States 3
   - France
-  - Taiwan
+  - France 2
   - United States 4
   - United States 5
   - United States 6
-  - France 2
-  - France 3
+  - United States 7
+  - United States 8
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
