@@ -26,16 +26,17 @@ dns:
     - 240.0.0.0/4
 proxies:
 - name: United States
-  type: hysteria2
   server: 74.63.233.74
-  port: 33445
+  port: 33441
+  type: tuic
+  uuid: a258065f-9502-4fe6-b3ed-cf7440e25150
   password: dongtaiwang.com
   alpn:
   - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 5 Mbps
-  down: 20 Mbps
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
 - name: United States 2
   type: hysteria2
   server: 109.104.152.89
