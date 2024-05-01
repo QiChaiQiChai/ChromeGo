@@ -54,6 +54,31 @@ proxies:
   udp-relay-mode: native
   congestion-controller: bbr
 - name: United States 2
+  type: hysteria
+  server: 108.181.5.22
+  port: 44557
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: dongtaiwang.com
+  up: 11
+  down: 55
+  hop_interval: 10
+- name: United States 3
+  server: 108.181.5.132
+  port: 9727
+  type: tuic
+  uuid: 02b0c83f-5fa4-4f08-8a9f-d9cae4a7a419
+  password: 02b0c83f-5fa4-4f08-8a9f-d9cae4a7a419
+  alpn:
+  - h3
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: United States 4
   type: hysteria2
   server: 109.104.152.89
   port: 22441
@@ -64,7 +89,7 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: United States 3
+- name: United States 5
   type: hysteria
   server: 108.181.5.133
   port: 26022
@@ -106,7 +131,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 4
+- name: United States 6
   type: hysteria
   server: 109.104.152.194
   port: 58510
@@ -120,22 +145,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 5
-  type: hysteria2
-  server: 104.192.224.141
-  port: 40391
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: United States 6
-  type: hysteria2
-  server: 104.192.224.140
-  port: 40391
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 - name: United States 7
   type: hysteria2
   server: 104.192.224.141
@@ -145,6 +154,22 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - name: United States 8
+  type: hysteria2
+  server: 104.192.224.140
+  port: 40391
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: United States 9
+  type: hysteria2
+  server: 104.192.224.141
+  port: 40391
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: United States 10
   type: hysteria2
   server: 104.192.224.141
   port: 40391
@@ -176,39 +201,45 @@ proxy-groups:
   - United States
   - United States 2
   - United States 3
-  - France
-  - France 2
   - United States 4
   - United States 5
+  - France
+  - France 2
   - United States 6
   - United States 7
   - United States 8
+  - United States 9
+  - United States 10
 - name: 手动选择
   type: select
   proxies:
   - United States
   - United States 2
   - United States 3
-  - France
-  - France 2
   - United States 4
   - United States 5
+  - France
+  - France 2
   - United States 6
   - United States 7
   - United States 8
+  - United States 9
+  - United States 10
 - name: 负载均衡
   type: load-balance
   proxies:
   - United States
   - United States 2
   - United States 3
-  - France
-  - France 2
   - United States 4
   - United States 5
+  - France
+  - France 2
   - United States 6
   - United States 7
   - United States 8
+  - United States 9
+  - United States 10
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
