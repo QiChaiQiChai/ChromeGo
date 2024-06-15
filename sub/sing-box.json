@@ -97,14 +97,13 @@
         "auto",
         "🇺🇸 United States",
         "🇺🇸 United States 2",
-        "🇺🇸 United States 3",
         "🇫🇷 France",
         "🇫🇷 France 2",
+        "🇺🇸 United States 3",
         "🇺🇸 United States 4",
         "🇺🇸 United States 5",
         "🇺🇸 United States 6",
-        "🇺🇸 United States 7",
-        "🇺🇸 United States 8"
+        "🇺🇸 United States 7"
       ]
     },
     {
@@ -113,14 +112,13 @@
       "outbounds": [
         "🇺🇸 United States",
         "🇺🇸 United States 2",
-        "🇺🇸 United States 3",
         "🇫🇷 France",
         "🇫🇷 France 2",
+        "🇺🇸 United States 3",
         "🇺🇸 United States 4",
         "🇺🇸 United States 5",
         "🇺🇸 United States 6",
-        "🇺🇸 United States 7",
-        "🇺🇸 United States 8"
+        "🇺🇸 United States 7"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -140,23 +138,6 @@
     },
     {
       "tag": "🇺🇸 United States",
-      "type": "hysteria",
-      "server": "108.181.5.22",
-      "server_port": 44557,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇺🇸 United States 2",
       "type": "hysteria2",
       "server": "109.104.152.89",
       "server_port": 22441,
@@ -173,10 +154,10 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 3",
+      "tag": "🇺🇸 United States 2",
       "type": "hysteria",
-      "server": "108.181.5.133",
-      "server_port": 26022,
+      "server": "109.104.152.194",
+      "server_port": 58510,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -224,7 +205,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 4",
+      "tag": "🇺🇸 United States 3",
       "type": "hysteria",
       "server": "109.104.152.194",
       "server_port": 58510,
@@ -241,7 +222,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 5",
+      "tag": "🇺🇸 United States 4",
       "type": "hysteria2",
       "server": "104.192.224.141",
       "server_port": 62894,
@@ -258,7 +239,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 6",
+      "tag": "🇺🇸 United States 5",
       "type": "hysteria2",
       "server": "104.192.224.140",
       "server_port": 62894,
@@ -275,7 +256,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 7",
+      "tag": "🇺🇸 United States 6",
       "type": "hysteria2",
       "server": "104.192.224.141",
       "server_port": 62894,
@@ -292,7 +273,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 8",
+      "tag": "🇺🇸 United States 7",
       "type": "hysteria2",
       "server": "104.192.224.141",
       "server_port": 62894,
