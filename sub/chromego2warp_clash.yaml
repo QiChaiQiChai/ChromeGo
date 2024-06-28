@@ -41,30 +41,6 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: United States
-  server: 109.104.152.186
-  port: 44550
-  type: tuic
-  uuid: 760d4891-63ab-40db-98c7-1219ae1b92df
-  password: dongtaiwang.com
-  alpn:
-  - h3
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-- name: United States 2
-  server: 109.104.152.186
-  port: 44550
-  type: tuic
-  uuid: 760d4891-63ab-40db-98c7-1219ae1b92df
-  password: dongtaiwang.com
-  alpn:
-  - h3
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
 - name: France
   type: hysteria
   server: 62.210.243.131
@@ -121,6 +97,22 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: United States
+  type: hysteria2
+  server: 104.192.224.141
+  port: 36252
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: United States 2
+  type: hysteria2
+  server: 104.192.224.141
+  port: 36252
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - name: United States 3
   type: hysteria2
   server: 104.192.224.141
@@ -130,22 +122,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - name: United States 4
-  type: hysteria2
-  server: 104.192.224.141
-  port: 36252
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: United States 5
-  type: hysteria2
-  server: 104.192.224.141
-  port: 36252
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: United States 6
   type: hysteria2
   server: 104.192.224.141
   port: 36252
@@ -174,42 +150,36 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - United States
-  - United States 2
   - France
   - France 2
   - France 3
   - France 4
+  - United States
+  - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
 - name: 手动选择
   type: select
   proxies:
-  - United States
-  - United States 2
   - France
   - France 2
   - France 3
   - France 4
+  - United States
+  - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
 - name: 负载均衡
   type: load-balance
   proxies:
-  - United States
-  - United States 2
   - France
   - France 2
   - France 3
   - France 4
+  - United States
+  - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
