@@ -95,6 +95,7 @@
       "type": "selector",
       "outbounds": [
         "auto",
+        "Unknown",
         "🇫🇷 France",
         "🇫🇷 France 2",
         "🇫🇷 France 3",
@@ -109,6 +110,7 @@
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
+        "Unknown",
         "🇫🇷 France",
         "🇫🇷 France 2",
         "🇫🇷 France 3",
@@ -133,6 +135,23 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "tag": "Unknown",
+      "type": "hysteria",
+      "server": "23.170.40.77",
+      "server_port": 30009,
+      "up_mbps": 50,
+      "down_mbps": 80,
+      "auth_str": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
       "tag": "🇫🇷 France",
