@@ -25,6 +25,19 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: Unknown
+  type: hysteria
+  server: 23.170.40.77
+  port: 30009
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: dongtaiwang.com
+  up: 11
+  down: 55
+  hop_interval: 10
 - name: France
   type: hysteria
   server: 62.210.243.131
@@ -119,6 +132,7 @@ proxy-groups:
   proxies:
   - 自动选择
   - DIRECT
+  - Unknown
   - France
   - France 2
   - France 3
@@ -133,6 +147,7 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
+  - Unknown
   - France
   - France 2
   - France 3
