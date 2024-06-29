@@ -224,8 +224,8 @@
     {
       "tag": "🇺🇸 United States",
       "type": "hysteria2",
-      "server": "104.192.224.141",
-      "server_port": 36252,
+      "server": "166.88.159.24",
+      "server_port": 40931,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -241,8 +241,8 @@
     {
       "tag": "🇺🇸 United States 2",
       "type": "hysteria2",
-      "server": "104.192.224.141",
-      "server_port": 36252,
+      "server": "166.88.159.24",
+      "server_port": 40931,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -258,8 +258,8 @@
     {
       "tag": "🇺🇸 United States 3",
       "type": "hysteria2",
-      "server": "104.192.224.141",
-      "server_port": 36252,
+      "server": "166.88.159.24",
+      "server_port": 40931,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -275,8 +275,8 @@
     {
       "tag": "🇺🇸 United States 4",
       "type": "hysteria2",
-      "server": "104.192.224.141",
-      "server_port": 36252,
+      "server": "166.88.159.24",
+      "server_port": 40931,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
