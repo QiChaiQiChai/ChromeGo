@@ -25,6 +25,18 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: France
+  server: 51.159.34.216
+  port: 33445
+  type: tuic
+  uuid: 1607c99b-7df5-4b58-a315-a440f9afde40
+  password: dongtaiwang.com
+  alpn:
+  - h3
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
 - name: Unknown
   type: hysteria
   server: 23.170.40.77
@@ -38,20 +50,6 @@ proxies:
   up: 11
   down: 55
   hop_interval: 10
-- name: France
-  type: hysteria
-  server: 62.210.243.131
-  port: 18702
-  ports: 18702
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
 - name: France 2
   type: hysteria
   server: 62.210.243.131
@@ -94,6 +92,20 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: France 5
+  type: hysteria
+  server: 62.210.243.131
+  port: 18702
+  ports: 18702
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
 - name: United States
   type: hysteria2
   server: 166.88.159.24
@@ -101,6 +113,14 @@ proxies:
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
+  skip-cert-verify: true
+- name: France 6
+  type: hysteria2
+  server: 51.159.2.179
+  port: 23499
+  password: dongtaiwang.com
+  fast-open: true
+  sni: bing.com
   skip-cert-verify: true
 - name: United States 2
   type: hysteria2
@@ -118,44 +138,38 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: United States 4
-  type: hysteria2
-  server: 166.88.159.24
-  port: 40931
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - 自动选择
   - DIRECT
-  - Unknown
   - France
+  - Unknown
   - France 2
   - France 3
   - France 4
+  - France 5
   - United States
+  - France 6
   - United States 2
   - United States 3
-  - United States 4
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - Unknown
   - France
+  - Unknown
   - France 2
   - France 3
   - France 4
+  - France 5
   - United States
+  - France 6
   - United States 2
   - United States 3
-  - United States 4
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
