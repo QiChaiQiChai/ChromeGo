@@ -41,18 +41,6 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: France
-  server: 51.159.34.216
-  port: 33445
-  type: tuic
-  uuid: 1607c99b-7df5-4b58-a315-a440f9afde40
-  password: dongtaiwang.com
-  alpn:
-  - h3
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
 - name: Unknown
   type: hysteria
   server: 23.170.40.77
@@ -66,6 +54,20 @@ proxies:
   up: 11
   down: 55
   hop_interval: 10
+- name: France
+  type: hysteria
+  server: 62.210.243.131
+  port: 18702
+  ports: 18702
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
 - name: France 2
   type: hysteria
   server: 62.210.243.131
@@ -108,20 +110,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: France 5
-  type: hysteria
-  server: 62.210.243.131
-  port: 18702
-  ports: 18702
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
 - name: United States
   type: hysteria2
   server: 166.88.159.24
@@ -130,7 +118,7 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: France 6
+- name: France 5
   type: hysteria2
   server: 51.159.2.179
   port: 23499
@@ -175,40 +163,37 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - France
   - Unknown
+  - France
   - France 2
   - France 3
   - France 4
-  - France 5
   - United States
-  - France 6
+  - France 5
   - United States 2
   - United States 3
 - name: 手动选择
   type: select
   proxies:
-  - France
   - Unknown
+  - France
   - France 2
   - France 3
   - France 4
-  - France 5
   - United States
-  - France 6
+  - France 5
   - United States 2
   - United States 3
 - name: 负载均衡
   type: load-balance
   proxies:
-  - France
   - Unknown
+  - France
   - France 2
   - France 3
   - France 4
-  - France 5
   - United States
-  - France 6
+  - France 5
   - United States 2
   - United States 3
   url: http://www.gstatic.com/generate_204
