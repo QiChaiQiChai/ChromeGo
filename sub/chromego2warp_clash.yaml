@@ -110,14 +110,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States
-  type: hysteria2
-  server: 166.88.159.24
-  port: 40931
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 - name: France 5
   type: hysteria2
   server: 51.159.2.179
@@ -126,21 +118,29 @@ proxies:
   fast-open: true
   sni: bing.com
   skip-cert-verify: true
-- name: United States 2
+- name: France 6
   type: hysteria2
-  server: 166.88.159.24
-  port: 40931
+  server: 51.159.2.179
+  port: 23499
   password: dongtaiwang.com
   fast-open: true
-  sni: www.bing.com
+  sni: bing.com
   skip-cert-verify: true
-- name: United States 3
+- name: France 7
   type: hysteria2
-  server: 166.88.159.24
-  port: 40931
+  server: 51.159.2.179
+  port: 23499
   password: dongtaiwang.com
   fast-open: true
-  sni: www.bing.com
+  sni: bing.com
+  skip-cert-verify: true
+- name: France 8
+  type: hysteria2
+  server: 51.159.2.179
+  port: 23499
+  password: dongtaiwang.com
+  fast-open: true
+  sni: bing.com
   skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
@@ -168,10 +168,10 @@ proxy-groups:
   - France 2
   - France 3
   - France 4
-  - United States
   - France 5
-  - United States 2
-  - United States 3
+  - France 6
+  - France 7
+  - France 8
 - name: 手动选择
   type: select
   proxies:
@@ -180,10 +180,10 @@ proxy-groups:
   - France 2
   - France 3
   - France 4
-  - United States
   - France 5
-  - United States 2
-  - United States 3
+  - France 6
+  - France 7
+  - France 8
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -192,10 +192,10 @@ proxy-groups:
   - France 2
   - France 3
   - France 4
-  - United States
   - France 5
-  - United States 2
-  - United States 3
+  - France 6
+  - France 7
+  - France 8
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
