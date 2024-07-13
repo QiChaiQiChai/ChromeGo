@@ -96,14 +96,14 @@
       "outbounds": [
         "auto",
         "Unknown",
+        "🇺🇸 United States",
+        "🇺🇸 United States 2",
+        "🇺🇸 United States 3",
+        "🇺🇸 United States 4",
         "🇫🇷 France",
         "🇫🇷 France 2",
         "🇫🇷 France 3",
-        "🇫🇷 France 4",
-        "🇫🇷 France 5",
-        "🇫🇷 France 6",
-        "🇫🇷 France 7",
-        "🇫🇷 France 8"
+        "🇫🇷 France 4"
       ]
     },
     {
@@ -111,14 +111,14 @@
       "type": "urltest",
       "outbounds": [
         "Unknown",
+        "🇺🇸 United States",
+        "🇺🇸 United States 2",
+        "🇺🇸 United States 3",
+        "🇺🇸 United States 4",
         "🇫🇷 France",
         "🇫🇷 France 2",
         "🇫🇷 France 3",
-        "🇫🇷 France 4",
-        "🇫🇷 France 5",
-        "🇫🇷 France 6",
-        "🇫🇷 France 7",
-        "🇫🇷 France 8"
+        "🇫🇷 France 4"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -154,13 +154,81 @@
       }
     },
     {
-      "tag": "🇫🇷 France",
+      "tag": "🇺🇸 United States",
       "type": "hysteria",
-      "server": "62.210.243.131",
-      "server_port": 18702,
+      "server": "104.192.224.139",
+      "server_port": 42113,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇺🇸 United States 2",
+      "type": "hysteria",
+      "server": "104.192.224.139",
+      "server_port": 42113,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇺🇸 United States 3",
+      "type": "hysteria",
+      "server": "104.192.224.139",
+      "server_port": 42113,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇺🇸 United States 4",
+      "type": "hysteria",
+      "server": "104.192.224.139",
+      "server_port": 42113,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇫🇷 France",
+      "type": "hysteria2",
+      "server": "51.159.2.179",
+      "server_port": 23499,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
       "tls": {
         "enabled": true,
         "server_name": "bing.com",
@@ -172,12 +240,12 @@
     },
     {
       "tag": "🇫🇷 France 2",
-      "type": "hysteria",
-      "server": "62.210.243.131",
-      "server_port": 18702,
-      "up_mbps": 11,
-      "down_mbps": 55,
-      "auth_str": "dongtaiwang.com",
+      "type": "hysteria2",
+      "server": "51.159.2.179",
+      "server_port": 23499,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
       "tls": {
         "enabled": true,
         "server_name": "bing.com",
@@ -189,12 +257,12 @@
     },
     {
       "tag": "🇫🇷 France 3",
-      "type": "hysteria",
-      "server": "62.210.243.131",
-      "server_port": 18702,
-      "up_mbps": 11,
-      "down_mbps": 55,
-      "auth_str": "dongtaiwang.com",
+      "type": "hysteria2",
+      "server": "51.159.2.179",
+      "server_port": 23499,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
       "tls": {
         "enabled": true,
         "server_name": "bing.com",
@@ -206,74 +274,6 @@
     },
     {
       "tag": "🇫🇷 France 4",
-      "type": "hysteria",
-      "server": "62.210.243.131",
-      "server_port": 18702,
-      "up_mbps": 11,
-      "down_mbps": 55,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇫🇷 France 5",
-      "type": "hysteria2",
-      "server": "51.159.2.179",
-      "server_port": 23499,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇫🇷 France 6",
-      "type": "hysteria2",
-      "server": "51.159.2.179",
-      "server_port": 23499,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇫🇷 France 7",
-      "type": "hysteria2",
-      "server": "51.159.2.179",
-      "server_port": 23499,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇫🇷 France 8",
       "type": "hysteria2",
       "server": "51.159.2.179",
       "server_port": 23499,
