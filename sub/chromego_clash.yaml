@@ -38,87 +38,87 @@ proxies:
   up: 11
   down: 55
   hop_interval: 10
+- name: United States
+  type: hysteria
+  server: 104.192.224.139
+  port: 42113
+  ports: 42113
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: United States 2
+  type: hysteria
+  server: 104.192.224.139
+  port: 42113
+  ports: 42113
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: United States 3
+  type: hysteria
+  server: 104.192.224.139
+  port: 42113
+  ports: 42113
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: United States 4
+  type: hysteria
+  server: 104.192.224.139
+  port: 42113
+  ports: 42113
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
 - name: France
-  type: hysteria
-  server: 62.210.243.131
-  port: 18702
-  ports: 18702
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
+  type: hysteria2
+  server: 51.159.2.179
+  port: 23499
+  password: dongtaiwang.com
   fast-open: true
-  protocol: udp
   sni: bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
 - name: France 2
-  type: hysteria
-  server: 62.210.243.131
-  port: 18702
-  ports: 18702
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
+  type: hysteria2
+  server: 51.159.2.179
+  port: 23499
+  password: dongtaiwang.com
   fast-open: true
-  protocol: udp
   sni: bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
 - name: France 3
-  type: hysteria
-  server: 62.210.243.131
-  port: 18702
-  ports: 18702
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
+  type: hysteria2
+  server: 51.159.2.179
+  port: 23499
+  password: dongtaiwang.com
   fast-open: true
-  protocol: udp
   sni: bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
 - name: France 4
-  type: hysteria
-  server: 62.210.243.131
-  port: 18702
-  ports: 18702
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: France 5
-  type: hysteria2
-  server: 51.159.2.179
-  port: 23499
-  password: dongtaiwang.com
-  fast-open: true
-  sni: bing.com
-  skip-cert-verify: true
-- name: France 6
-  type: hysteria2
-  server: 51.159.2.179
-  port: 23499
-  password: dongtaiwang.com
-  fast-open: true
-  sni: bing.com
-  skip-cert-verify: true
-- name: France 7
-  type: hysteria2
-  server: 51.159.2.179
-  port: 23499
-  password: dongtaiwang.com
-  fast-open: true
-  sni: bing.com
-  skip-cert-verify: true
-- name: France 8
   type: hysteria2
   server: 51.159.2.179
   port: 23499
@@ -133,14 +133,14 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - Unknown
+  - United States
+  - United States 2
+  - United States 3
+  - United States 4
   - France
   - France 2
   - France 3
   - France 4
-  - France 5
-  - France 6
-  - France 7
-  - France 8
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -148,14 +148,14 @@ proxy-groups:
   tolerance: 50
   proxies:
   - Unknown
+  - United States
+  - United States 2
+  - United States 3
+  - United States 4
   - France
   - France 2
   - France 3
   - France 4
-  - France 5
-  - France 6
-  - France 7
-  - France 8
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
