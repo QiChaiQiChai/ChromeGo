@@ -25,6 +25,18 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: Taiwan
+  server: www2.dtku44.xyz
+  port: 11224
+  type: tuic
+  uuid: 285524a5-18ae-4bf4-8e89-473dfdc3a212
+  password: dongtaiwang.com
+  alpn:
+  - h3
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
 - name: Unknown
   type: hysteria
   server: 23.170.40.77
@@ -132,6 +144,7 @@ proxy-groups:
   proxies:
   - 自动选择
   - DIRECT
+  - Taiwan
   - Unknown
   - United States
   - United States 2
@@ -147,6 +160,7 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
+  - Taiwan
   - Unknown
   - United States
   - United States 2

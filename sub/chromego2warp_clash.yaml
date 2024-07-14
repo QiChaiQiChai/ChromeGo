@@ -41,6 +41,18 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
+- name: Taiwan
+  server: www2.dtku44.xyz
+  port: 11224
+  type: tuic
+  uuid: 285524a5-18ae-4bf4-8e89-473dfdc3a212
+  password: dongtaiwang.com
+  alpn:
+  - h3
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
 - name: Unknown
   type: hysteria
   server: 23.170.40.77
@@ -163,6 +175,7 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
+  - Taiwan
   - Unknown
   - United States
   - United States 2
@@ -175,6 +188,7 @@ proxy-groups:
 - name: 手动选择
   type: select
   proxies:
+  - Taiwan
   - Unknown
   - United States
   - United States 2
@@ -187,6 +201,7 @@ proxy-groups:
 - name: 负载均衡
   type: load-balance
   proxies:
+  - Taiwan
   - Unknown
   - United States
   - United States 2
