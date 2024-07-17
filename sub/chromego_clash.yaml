@@ -37,24 +37,11 @@ proxies:
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: Unknown
-  type: hysteria
-  server: 23.170.40.77
-  port: 30009
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: dongtaiwang.com
-  up: 11
-  down: 55
-  hop_interval: 10
 - name: United States
   type: hysteria
-  server: 104.192.224.139
-  port: 42113
-  ports: 42113
+  server: 166.1.18.52
+  port: 41363
+  ports: 41363
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -94,9 +81,9 @@ proxies:
   - h3
 - name: United States 4
   type: hysteria
-  server: 104.192.224.139
-  port: 42113
-  ports: 42113
+  server: 166.1.18.52
+  port: 41363
+  ports: 41363
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -106,6 +93,22 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: United States 5
+  type: hysteria2
+  server: 38.114.103.210
+  port: 30647
+  password: dongtaiwang.com
+  fast-open: true
+  sni: bing.com
+  skip-cert-verify: true
+- name: United States 6
+  type: hysteria2
+  server: 38.114.103.210
+  port: 30647
+  password: dongtaiwang.com
+  fast-open: true
+  sni: bing.com
+  skip-cert-verify: true
 - name: France
   type: hysteria2
   server: 51.159.2.179
@@ -122,22 +125,6 @@ proxies:
   fast-open: true
   sni: bing.com
   skip-cert-verify: true
-- name: France 3
-  type: hysteria2
-  server: 51.159.2.179
-  port: 23499
-  password: dongtaiwang.com
-  fast-open: true
-  sni: bing.com
-  skip-cert-verify: true
-- name: France 4
-  type: hysteria2
-  server: 51.159.2.179
-  port: 23499
-  password: dongtaiwang.com
-  fast-open: true
-  sni: bing.com
-  skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
   type: select
@@ -145,15 +132,14 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - Taiwan
-  - Unknown
   - United States
   - United States 2
   - United States 3
   - United States 4
+  - United States 5
+  - United States 6
   - France
   - France 2
-  - France 3
-  - France 4
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -161,15 +147,14 @@ proxy-groups:
   tolerance: 50
   proxies:
   - Taiwan
-  - Unknown
   - United States
   - United States 2
   - United States 3
   - United States 4
+  - United States 5
+  - United States 6
   - France
   - France 2
-  - France 3
-  - France 4
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
