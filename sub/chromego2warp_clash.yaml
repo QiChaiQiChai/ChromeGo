@@ -44,42 +44,42 @@ proxies:
 - name: United States
   type: hysteria
   server: 208.87.243.123
-  port: 38268
-  ports: 38268
+  port: 31476
+  ports: 31476
   auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: www.microsoft.com
+  sni: wechat.com
   skip-cert-verify: true
   alpn:
   - h3
 - name: United States 2
   type: hysteria
   server: 208.87.243.123
-  port: 38268
-  ports: 38268
+  port: 31476
+  ports: 31476
   auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: www.microsoft.com
+  sni: wechat.com
   skip-cert-verify: true
   alpn:
   - h3
 - name: United States 3
   type: hysteria
   server: 208.87.243.123
-  port: 38268
-  ports: 38268
+  port: 31476
+  ports: 31476
   auth_str: dongtaiwang.com
   up: 80
   down: 100
   fast-open: true
   protocol: udp
-  sni: www.microsoft.com
+  sni: wechat.com
   skip-cert-verify: true
   alpn:
   - h3
@@ -107,27 +107,27 @@ proxies:
   skip-cert-verify: true
 - name: United States 6
   type: hysteria2
-  server: 208.87.243.123
-  port: 33599
+  server: 108.181.24.39
+  port: 60714
   password: dongtaiwang.com
   fast-open: true
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: United States 7
   type: hysteria2
-  server: 208.87.243.123
-  port: 33599
+  server: 108.181.24.39
+  port: 60714
   password: dongtaiwang.com
   fast-open: true
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: United States 8
   type: hysteria2
-  server: 208.87.243.123
-  port: 33599
+  server: 108.181.24.39
+  port: 60714
   password: dongtaiwang.com
   fast-open: true
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
