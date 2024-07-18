@@ -70,8 +70,8 @@ proxies:
 - name: United States 4
   type: hysteria
   server: 166.1.18.52
-  port: 41363
-  ports: 41363
+  port: 10295
+  ports: 20000-30000
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -84,10 +84,10 @@ proxies:
 - name: United States 5
   type: hysteria2
   server: 38.114.103.210
-  port: 30647
+  port: 26288
   password: dongtaiwang.com
   fast-open: true
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: United States 6
   type: hysteria2
