@@ -81,10 +81,18 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: France
+  type: hysteria2
+  server: 51.159.34.216
+  port: 7571
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - name: United States 5
   type: hysteria2
-  server: 38.114.103.210
-  port: 26288
+  server: 108.181.24.39
+  port: 60714
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -105,14 +113,6 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: United States 8
-  type: hysteria2
-  server: 108.181.24.39
-  port: 60714
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
   type: select
@@ -123,10 +123,10 @@ proxy-groups:
   - United States 2
   - United States 3
   - United States 4
+  - France
   - United States 5
   - United States 6
   - United States 7
-  - United States 8
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -137,10 +137,10 @@ proxy-groups:
   - United States 2
   - United States 3
   - United States 4
+  - France
   - United States 5
   - United States 6
   - United States 7
-  - United States 8
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
