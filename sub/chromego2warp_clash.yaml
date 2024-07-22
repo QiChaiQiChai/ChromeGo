@@ -99,36 +99,36 @@ proxies:
   - h3
 - name: United States 5
   type: hysteria2
-  server: 173.234.31.99
-  port: 56549
+  server: hy2.3124845.xyz
+  port: 443
   password: dongtaiwang.com
   fast-open: true
-  sni: ''
-  skip-cert-verify: true
+  sni: hy2.3124845.xyz
+  skip-cert-verify: false
 - name: United States 6
   type: hysteria2
-  server: 173.234.31.99
-  port: 56549
+  server: hy2.3124845.xyz
+  port: 443
   password: dongtaiwang.com
   fast-open: true
-  sni: ''
-  skip-cert-verify: true
+  sni: hy2.3124845.xyz
+  skip-cert-verify: false
 - name: United States 7
   type: hysteria2
-  server: 173.234.31.99
-  port: 56549
+  server: hy2.3124845.xyz
+  port: 443
   password: dongtaiwang.com
   fast-open: true
-  sni: ''
-  skip-cert-verify: true
+  sni: hy2.3124845.xyz
+  skip-cert-verify: false
 - name: United States 8
   type: hysteria2
-  server: 173.234.31.99
-  port: 56549
+  server: hy2.3124845.xyz
+  port: 443
   password: dongtaiwang.com
   fast-open: true
-  sni: ''
-  skip-cert-verify: true
+  sni: hy2.3124845.xyz
+  skip-cert-verify: false
 proxy-groups:
 - name: 节点选择
   type: select
