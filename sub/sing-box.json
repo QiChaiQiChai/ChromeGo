@@ -226,15 +226,15 @@
     {
       "tag": "🇺🇸 United States 6",
       "type": "hysteria2",
-      "server": "hy3.3124845.xyz",
-      "server_port": 443,
+      "server": "166.1.18.178",
+      "server_port": 23456,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "hy3.3124845.xyz",
-        "insecure": false,
+        "server_name": "bing.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
@@ -243,15 +243,15 @@
     {
       "tag": "🇺🇸 United States 7",
       "type": "hysteria2",
-      "server": "hy3.3124845.xyz",
-      "server_port": 443,
+      "server": "166.1.18.178",
+      "server_port": 23456,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "hy3.3124845.xyz",
-        "insecure": false,
+        "server_name": "bing.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
@@ -260,15 +260,15 @@
     {
       "tag": "🇺🇸 United States 8",
       "type": "hysteria2",
-      "server": "hy3.3124845.xyz",
-      "server_port": 443,
+      "server": "166.1.18.178",
+      "server_port": 23456,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "hy3.3124845.xyz",
-        "insecure": false,
+        "server_name": "bing.com",
+        "insecure": true,
         "alpn": [
           "h3"
         ]
