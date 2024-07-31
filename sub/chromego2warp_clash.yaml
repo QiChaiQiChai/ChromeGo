@@ -43,9 +43,9 @@ proxies:
   dialer-proxy: WARP前置节点
 - name: United States
   type: hysteria
-  server: 38.135.52.192
-  port: 23456
-  ports: 23456
+  server: 104.166.125.163
+  port: 11001
+  ports: 11001
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -57,9 +57,9 @@ proxies:
   - h3
 - name: United States 2
   type: hysteria
-  server: 38.135.52.192
-  port: 23456
-  ports: 23456
+  server: 104.166.125.163
+  port: 11001
+  ports: 11001
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -71,9 +71,9 @@ proxies:
   - h3
 - name: United States 3
   type: hysteria
-  server: 38.135.52.192
-  port: 23456
-  ports: 23456
+  server: 104.166.125.163
+  port: 11001
+  ports: 11001
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -85,9 +85,9 @@ proxies:
   - h3
 - name: United States 4
   type: hysteria
-  server: 38.135.52.192
-  port: 23456
-  ports: 23456
+  server: 104.166.125.163
+  port: 11001
+  ports: 11001
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -100,34 +100,34 @@ proxies:
 - name: United States 5
   type: hysteria2
   server: 207.90.239.157
-  port: 22334
+  port: 15669
   password: dongtaiwang.com
   fast-open: true
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: United States 6
   type: hysteria2
   server: 207.90.239.157
-  port: 22334
+  port: 15669
   password: dongtaiwang.com
   fast-open: true
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: United States 7
   type: hysteria2
   server: 207.90.239.157
-  port: 22334
+  port: 15669
   password: dongtaiwang.com
   fast-open: true
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: United States 8
   type: hysteria2
   server: 207.90.239.157
-  port: 22334
+  port: 15669
   password: dongtaiwang.com
   fast-open: true
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
