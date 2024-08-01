@@ -27,9 +27,9 @@ dns:
 proxies:
 - name: United States
   type: hysteria
-  server: 104.166.125.163
-  port: 11001
-  ports: 11001
+  server: 91.149.239.23
+  port: 11223
+  ports: 11223
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -41,9 +41,9 @@ proxies:
   - h3
 - name: United States 2
   type: hysteria
-  server: 104.166.125.163
-  port: 11001
-  ports: 11001
+  server: 166.1.221.169
+  port: 11223
+  ports: 11223
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -55,9 +55,9 @@ proxies:
   - h3
 - name: United States 3
   type: hysteria
-  server: 104.166.125.163
-  port: 11001
-  ports: 11001
+  server: 166.1.221.169
+  port: 11223
+  ports: 11223
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -69,9 +69,9 @@ proxies:
   - h3
 - name: United States 4
   type: hysteria
-  server: 104.166.125.163
-  port: 11001
-  ports: 11001
+  server: 166.1.221.169
+  port: 11223
+  ports: 11223
   auth_str: dongtaiwang.com
   up: 80
   down: 100
