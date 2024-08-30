@@ -100,7 +100,7 @@ proxies:
 - name: United States 5
   type: hysteria2
   server: 207.90.239.157
-  port: 15669
+  port: 3400
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -108,7 +108,7 @@ proxies:
 - name: United States 6
   type: hysteria2
   server: 207.90.239.157
-  port: 15669
+  port: 3400
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -116,7 +116,7 @@ proxies:
 - name: United States 7
   type: hysteria2
   server: 207.90.239.157
-  port: 15669
+  port: 3400
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -124,7 +124,7 @@ proxies:
 - name: United States 8
   type: hysteria2
   server: 207.90.239.157
-  port: 15669
+  port: 3400
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
