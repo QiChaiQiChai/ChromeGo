@@ -25,6 +25,17 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: Russia
+  type: hysteria
+  server: 46.29.166.206
+  port: 22222
+  auth_str: dongtaiwang.com
+  alpn:
+  - h3
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
 - name: United States
   type: hysteria
   server: 166.1.221.169
@@ -119,6 +130,7 @@ proxy-groups:
   proxies:
   - 自动选择
   - DIRECT
+  - Russia
   - United States
   - United States 2
   - United States 3
@@ -133,6 +145,7 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
+  - Russia
   - United States
   - United States 2
   - United States 3

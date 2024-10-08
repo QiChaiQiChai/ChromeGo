@@ -41,6 +41,17 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
+- name: Russia
+  type: hysteria
+  server: 46.29.166.206
+  port: 22222
+  auth_str: dongtaiwang.com
+  alpn:
+  - h3
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
 - name: United States
   type: hysteria
   server: 166.1.221.169
@@ -150,6 +161,7 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
+  - Russia
   - United States
   - United States 2
   - United States 3
@@ -161,6 +173,7 @@ proxy-groups:
 - name: 手动选择
   type: select
   proxies:
+  - Russia
   - United States
   - United States 2
   - United States 3
@@ -172,6 +185,7 @@ proxy-groups:
 - name: 负载均衡
   type: load-balance
   proxies:
+  - Russia
   - United States
   - United States 2
   - United States 3
