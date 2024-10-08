@@ -39,8 +39,8 @@ proxies:
 - name: United States
   type: hysteria
   server: 166.1.221.169
-  port: 11223
-  ports: 11223
+  port: 55555
+  ports: 55555
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -53,8 +53,8 @@ proxies:
 - name: United States 2
   type: hysteria
   server: 166.1.221.169
-  port: 11223
-  ports: 11223
+  port: 55555
+  ports: 55555
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -67,8 +67,8 @@ proxies:
 - name: United States 3
   type: hysteria
   server: 166.1.221.169
-  port: 11223
-  ports: 11223
+  port: 55555
+  ports: 55555
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -81,8 +81,8 @@ proxies:
 - name: United States 4
   type: hysteria
   server: 166.1.221.169
-  port: 11223
-  ports: 11223
+  port: 55555
+  ports: 55555
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -95,7 +95,7 @@ proxies:
 - name: United States 5
   type: hysteria2
   server: 207.90.239.157
-  port: 3400
+  port: 11111
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -103,7 +103,7 @@ proxies:
 - name: United States 6
   type: hysteria2
   server: 207.90.239.157
-  port: 3400
+  port: 11111
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -111,7 +111,7 @@ proxies:
 - name: United States 7
   type: hysteria2
   server: 207.90.239.157
-  port: 3400
+  port: 11111
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -119,7 +119,7 @@ proxies:
 - name: United States 8
   type: hysteria2
   server: 207.90.239.157
-  port: 3400
+  port: 11111
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
