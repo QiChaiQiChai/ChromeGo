@@ -95,6 +95,7 @@
       "type": "selector",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia",
         "🇺🇸 United States",
         "🇺🇸 United States 2",
         "🇺🇸 United States 3",
@@ -109,6 +110,7 @@
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
+        "🇷🇺 Russia",
         "🇺🇸 United States",
         "🇺🇸 United States 2",
         "🇺🇸 United States 3",
@@ -133,6 +135,23 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "tag": "🇷🇺 Russia",
+      "type": "hysteria",
+      "server": "46.29.166.206",
+      "server_port": 22222,
+      "up_mbps": 50,
+      "down_mbps": 80,
+      "auth_str": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
       "tag": "🇺🇸 United States",
