@@ -52,90 +52,90 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
+- name: Russia 2
+  type: hysteria
+  server: 46.17.43.223
+  port: 12311
+  ports: 12311
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: Russia 3
+  type: hysteria
+  server: 46.17.43.223
+  port: 12311
+  ports: 12311
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: Russia 4
+  type: hysteria
+  server: 46.17.43.223
+  port: 12311
+  ports: 12311
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: Russia 5
+  type: hysteria
+  server: 46.17.43.223
+  port: 12311
+  ports: 12311
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
 - name: United States
-  type: hysteria
-  server: 166.1.221.169
-  port: 55555
-  ports: 55555
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
+  type: hysteria2
+  server: 207.90.239.157
+  port: 12344
+  password: dongtaiwang.com
   fast-open: true
-  protocol: udp
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
 - name: United States 2
-  type: hysteria
-  server: 166.1.221.169
-  port: 55555
-  ports: 55555
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
+  type: hysteria2
+  server: 207.90.239.157
+  port: 12344
+  password: dongtaiwang.com
   fast-open: true
-  protocol: udp
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
 - name: United States 3
-  type: hysteria
-  server: 166.1.221.169
-  port: 55555
-  ports: 55555
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
+  type: hysteria2
+  server: 207.90.239.157
+  port: 12344
+  password: dongtaiwang.com
   fast-open: true
-  protocol: udp
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
 - name: United States 4
-  type: hysteria
-  server: 166.1.221.169
-  port: 55555
-  ports: 55555
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: United States 5
   type: hysteria2
   server: 207.90.239.157
-  port: 11111
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: United States 6
-  type: hysteria2
-  server: 207.90.239.157
-  port: 11111
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: United States 7
-  type: hysteria2
-  server: 207.90.239.157
-  port: 11111
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: United States 8
-  type: hysteria2
-  server: 207.90.239.157
-  port: 11111
+  port: 12344
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -162,38 +162,38 @@ proxy-groups:
   tolerance: 50
   proxies:
   - Russia
+  - Russia 2
+  - Russia 3
+  - Russia 4
+  - Russia 5
   - United States
   - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
-  - United States 7
-  - United States 8
 - name: 手动选择
   type: select
   proxies:
   - Russia
+  - Russia 2
+  - Russia 3
+  - Russia 4
+  - Russia 5
   - United States
   - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
-  - United States 7
-  - United States 8
 - name: 负载均衡
   type: load-balance
   proxies:
   - Russia
+  - Russia 2
+  - Russia 3
+  - Russia 4
+  - Russia 5
   - United States
   - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
-  - United States 7
-  - United States 8
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
