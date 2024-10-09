@@ -96,14 +96,14 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia",
+        "🇷🇺 Russia 2",
+        "🇷🇺 Russia 3",
+        "🇷🇺 Russia 4",
+        "🇷🇺 Russia 5",
         "🇺🇸 United States",
         "🇺🇸 United States 2",
         "🇺🇸 United States 3",
-        "🇺🇸 United States 4",
-        "🇺🇸 United States 5",
-        "🇺🇸 United States 6",
-        "🇺🇸 United States 7",
-        "🇺🇸 United States 8"
+        "🇺🇸 United States 4"
       ]
     },
     {
@@ -111,14 +111,14 @@
       "type": "urltest",
       "outbounds": [
         "🇷🇺 Russia",
+        "🇷🇺 Russia 2",
+        "🇷🇺 Russia 3",
+        "🇷🇺 Russia 4",
+        "🇷🇺 Russia 5",
         "🇺🇸 United States",
         "🇺🇸 United States 2",
         "🇺🇸 United States 3",
-        "🇺🇸 United States 4",
-        "🇺🇸 United States 5",
-        "🇺🇸 United States 6",
-        "🇺🇸 United States 7",
-        "🇺🇸 United States 8"
+        "🇺🇸 United States 4"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -154,16 +154,88 @@
       }
     },
     {
-      "tag": "🇺🇸 United States",
+      "tag": "🇷🇺 Russia 2",
       "type": "hysteria",
-      "server": "166.1.221.169",
-      "server_port": 55555,
+      "server": "46.17.43.223",
+      "server_port": 12311,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
       "tls": {
         "enabled": true,
         "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      },
+      "obfs": "dongtaiwang.com"
+    },
+    {
+      "tag": "🇷🇺 Russia 3",
+      "type": "hysteria",
+      "server": "46.17.43.223",
+      "server_port": 12311,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      },
+      "obfs": "dongtaiwang.com"
+    },
+    {
+      "tag": "🇷🇺 Russia 4",
+      "type": "hysteria",
+      "server": "46.17.43.223",
+      "server_port": 12311,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      },
+      "obfs": "dongtaiwang.com"
+    },
+    {
+      "tag": "🇷🇺 Russia 5",
+      "type": "hysteria",
+      "server": "46.17.43.223",
+      "server_port": 12311,
+      "up_mbps": 11,
+      "down_mbps": 55,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      },
+      "obfs": "dongtaiwang.com"
+    },
+    {
+      "tag": "🇺🇸 United States",
+      "type": "hysteria2",
+      "server": "207.90.239.157",
+      "server_port": 12344,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
         "insecure": true,
         "alpn": [
           "h3"
@@ -172,15 +244,15 @@
     },
     {
       "tag": "🇺🇸 United States 2",
-      "type": "hysteria",
-      "server": "166.1.221.169",
-      "server_port": 55555,
-      "up_mbps": 11,
-      "down_mbps": 55,
-      "auth_str": "dongtaiwang.com",
+      "type": "hysteria2",
+      "server": "207.90.239.157",
+      "server_port": 12344,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "bing.com",
+        "server_name": "www.bing.com",
         "insecure": true,
         "alpn": [
           "h3"
@@ -189,15 +261,15 @@
     },
     {
       "tag": "🇺🇸 United States 3",
-      "type": "hysteria",
-      "server": "166.1.221.169",
-      "server_port": 55555,
-      "up_mbps": 11,
-      "down_mbps": 55,
-      "auth_str": "dongtaiwang.com",
+      "type": "hysteria2",
+      "server": "207.90.239.157",
+      "server_port": 12344,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
       "tls": {
         "enabled": true,
-        "server_name": "bing.com",
+        "server_name": "www.bing.com",
         "insecure": true,
         "alpn": [
           "h3"
@@ -206,77 +278,9 @@
     },
     {
       "tag": "🇺🇸 United States 4",
-      "type": "hysteria",
-      "server": "166.1.221.169",
-      "server_port": 55555,
-      "up_mbps": 11,
-      "down_mbps": 55,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇺🇸 United States 5",
       "type": "hysteria2",
       "server": "207.90.239.157",
-      "server_port": 11111,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇺🇸 United States 6",
-      "type": "hysteria2",
-      "server": "207.90.239.157",
-      "server_port": 11111,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇺🇸 United States 7",
-      "type": "hysteria2",
-      "server": "207.90.239.157",
-      "server_port": 11111,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇺🇸 United States 8",
-      "type": "hysteria2",
-      "server": "207.90.239.157",
-      "server_port": 11111,
+      "server_port": 12344,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
