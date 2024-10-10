@@ -140,7 +140,7 @@
       "tag": "🇷🇺 Russia",
       "type": "hysteria",
       "server": "46.29.166.206",
-      "server_port": 22222,
+      "server_port": 100,
       "up_mbps": 50,
       "down_mbps": 80,
       "auth_str": "",
