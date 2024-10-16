@@ -25,131 +25,87 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: France
+  type: hysteria
+  server: 62.210.8.63
+  port: 2345
+  ports: 2345
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
 - name: Russia
   type: hysteria
-  server: 46.29.166.206
-  port: 100
+  server: 46.17.43.223
+  port: 12311
+  ports: 12311
   auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
   alpn:
   - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 11 Mbps
-  down: 55 Mbps
 - name: Russia 2
   type: hysteria
-  server: 46.29.166.206
-  port: 100
+  server: 46.17.43.223
+  port: 12311
+  ports: 12311
   auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
   alpn:
   - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 11 Mbps
-  down: 55 Mbps
 - name: Russia 3
   type: hysteria
-  server: 46.29.166.206
-  port: 100
+  server: 46.17.43.223
+  port: 12311
+  ports: 12311
   auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: bing.com
+  skip-cert-verify: true
   alpn:
   - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 11 Mbps
-  down: 55 Mbps
 - name: Russia 4
-  type: hysteria
-  server: 46.29.166.206
-  port: 100
-  auth_str: dongtaiwang.com
-  alpn:
-  - h3
+  type: hysteria2
+  server: 185.22.152.93
+  port: 33713
+  password: dongtaiwang.com
+  fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-  up: 11 Mbps
-  down: 55 Mbps
 - name: Russia 5
-  type: hysteria
-  server: 46.17.43.223
-  port: 12311
-  ports: 12311
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
+  type: hysteria2
+  server: 185.22.152.93
+  port: 33713
+  password: dongtaiwang.com
   fast-open: true
-  protocol: udp
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
 - name: Russia 6
-  type: hysteria
-  server: 46.17.43.223
-  port: 12311
-  ports: 12311
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
+  type: hysteria2
+  server: 185.22.152.93
+  port: 33713
+  password: dongtaiwang.com
   fast-open: true
-  protocol: udp
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
 - name: Russia 7
-  type: hysteria
-  server: 46.17.43.223
-  port: 12311
-  ports: 12311
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: Russia 8
-  type: hysteria
-  server: 46.17.43.223
-  port: 12311
-  ports: 12311
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: Russia 9
-  type: hysteria2
-  server: 185.22.152.93
-  port: 33713
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: Russia 10
-  type: hysteria2
-  server: 185.22.152.93
-  port: 33713
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: Russia 11
-  type: hysteria2
-  server: 185.22.152.93
-  port: 33713
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: Russia 12
   type: hysteria2
   server: 185.22.152.93
   port: 33713
@@ -163,6 +119,7 @@ proxy-groups:
   proxies:
   - 自动选择
   - DIRECT
+  - France
   - Russia
   - Russia 2
   - Russia 3
@@ -170,17 +127,13 @@ proxy-groups:
   - Russia 5
   - Russia 6
   - Russia 7
-  - Russia 8
-  - Russia 9
-  - Russia 10
-  - Russia 11
-  - Russia 12
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
+  - France
   - Russia
   - Russia 2
   - Russia 3
@@ -188,11 +141,6 @@ proxy-groups:
   - Russia 5
   - Russia 6
   - Russia 7
-  - Russia 8
-  - Russia 9
-  - Russia 10
-  - Russia 11
-  - Russia 12
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
