@@ -96,8 +96,8 @@
       "outbounds": [
         "auto",
         "🇩🇪 Germany",
-        "🇺🇸 United States",
-        "🇺🇸 United States 2",
+        "🇫🇷 France",
+        "🇫🇷 France 2",
         "🇩🇪 Germany 2",
         "🇷🇺 Russia",
         "🇷🇺 Russia 2",
@@ -114,8 +114,8 @@
       "type": "urltest",
       "outbounds": [
         "🇩🇪 Germany",
-        "🇺🇸 United States",
-        "🇺🇸 United States 2",
+        "🇫🇷 France",
+        "🇫🇷 France 2",
         "🇩🇪 Germany 2",
         "🇷🇺 Russia",
         "🇷🇺 Russia 2",
@@ -160,10 +160,10 @@
       }
     },
     {
-      "tag": "🇺🇸 United States",
+      "tag": "🇫🇷 France",
       "type": "hysteria",
-      "server": "166.1.18.42",
-      "server_port": 37950,
+      "server": "195.154.184.5",
+      "server_port": 22787,
       "up_mbps": 50,
       "down_mbps": 80,
       "auth_str": "",
@@ -177,10 +177,10 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 2",
+      "tag": "🇫🇷 France 2",
       "type": "hysteria",
-      "server": "166.1.18.42",
-      "server_port": 37950,
+      "server": "195.154.184.5",
+      "server_port": 22787,
       "up_mbps": 50,
       "down_mbps": 80,
       "auth_str": "",
