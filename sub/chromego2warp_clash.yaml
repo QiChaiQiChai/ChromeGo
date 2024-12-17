@@ -41,18 +41,6 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: Taiwan
-  type: hysteria
-  server: 1.162.11.157
-  port: 10045
-  ports: 15000-24000
-  auth_str: github.com/Alvin9999
-  alpn:
-  - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 2 Mbps
-  down: 2 Mbps
 - name: Germany
   type: hysteria
   server: 146.0.36.114
@@ -210,7 +198,6 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - Taiwan
   - Germany
   - France
   - France 2
@@ -226,7 +213,6 @@ proxy-groups:
 - name: 手动选择
   type: select
   proxies:
-  - Taiwan
   - Germany
   - France
   - France 2
@@ -242,7 +228,6 @@ proxy-groups:
 - name: 负载均衡
   type: load-balance
   proxies:
-  - Taiwan
   - Germany
   - France
   - France 2

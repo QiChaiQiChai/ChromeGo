@@ -25,18 +25,6 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: Taiwan
-  type: hysteria
-  server: 1.162.11.157
-  port: 10045
-  ports: 15000-24000
-  auth_str: github.com/Alvin9999
-  alpn:
-  - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 2 Mbps
-  down: 2 Mbps
 - name: Germany
   type: hysteria
   server: 146.0.36.114
@@ -179,7 +167,6 @@ proxy-groups:
   proxies:
   - 自动选择
   - DIRECT
-  - Taiwan
   - Germany
   - France
   - France 2
@@ -198,7 +185,6 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - Taiwan
   - Germany
   - France
   - France 2
