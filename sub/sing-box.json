@@ -95,10 +95,6 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "🇺🇸 United States",
-        "🇺🇸 United States 2",
-        "🇺🇸 United States 3",
-        "🇺🇸 United States 4",
         "🇩🇪 Germany",
         "🇫🇷 France",
         "🇫🇷 France 2",
@@ -117,10 +113,6 @@
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "🇺🇸 United States",
-        "🇺🇸 United States 2",
-        "🇺🇸 United States 3",
-        "🇺🇸 United States 4",
         "🇩🇪 Germany",
         "🇫🇷 France",
         "🇫🇷 France 2",
@@ -149,74 +141,6 @@
     {
       "type": "block",
       "tag": "block"
-    },
-    {
-      "tag": "🇺🇸 United States",
-      "type": "hysteria2",
-      "server": "166.1.190.83",
-      "server_port": 61677,
-      "password": "github.com/Alvin9999",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇺🇸 United States 2",
-      "type": "hysteria2",
-      "server": "108.181.5.131",
-      "server_port": 7329,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇺🇸 United States 3",
-      "type": "hysteria2",
-      "server": "166.1.190.83",
-      "server_port": 61677,
-      "password": "github.com/Alvin9999",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇺🇸 United States 4",
-      "type": "hysteria2",
-      "server": "166.1.190.83",
-      "server_port": 61677,
-      "password": "github.com/Alvin9999",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
     },
     {
       "tag": "🇩🇪 Germany",
