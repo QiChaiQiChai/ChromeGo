@@ -41,54 +41,6 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: United States
-  type: hysteria2
-  server: 166.1.190.83
-  port: 61677
-  ports: 10000-50000
-  password: github.com/Alvin9999
-  alpn:
-  - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 5 Mbps
-  down: 10 Mbps
-- name: United States 2
-  type: hysteria2
-  server: 108.181.5.131
-  port: 7329
-  ports: 20000-30000
-  password: dongtaiwang.com
-  alpn:
-  - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 5 Mbps
-  down: 10 Mbps
-- name: United States 3
-  type: hysteria2
-  server: 166.1.190.83
-  port: 61677
-  ports: 10000-50000
-  password: github.com/Alvin9999
-  alpn:
-  - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 5 Mbps
-  down: 10 Mbps
-- name: United States 4
-  type: hysteria2
-  server: 166.1.190.83
-  port: 61677
-  ports: 10000-50000
-  password: github.com/Alvin9999
-  alpn:
-  - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 5 Mbps
-  down: 10 Mbps
 - name: Germany
   type: hysteria
   server: 146.0.36.114
@@ -246,10 +198,6 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - United States
-  - United States 2
-  - United States 3
-  - United States 4
   - Germany
   - France
   - France 2
@@ -265,10 +213,6 @@ proxy-groups:
 - name: 手动选择
   type: select
   proxies:
-  - United States
-  - United States 2
-  - United States 3
-  - United States 4
   - Germany
   - France
   - France 2
@@ -284,10 +228,6 @@ proxy-groups:
 - name: 负载均衡
   type: load-balance
   proxies:
-  - United States
-  - United States 2
-  - United States 3
-  - United States 4
   - Germany
   - France
   - France 2
