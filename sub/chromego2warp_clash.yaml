@@ -91,8 +91,8 @@ proxies:
   down: 55 Mbps
 - name: Russia
   type: hysteria
-  server: 46.17.43.223
-  port: 64907
+  server: 185.22.155.71
+  port: 15424
   ports: 30000-40000
   auth_str: dongtaiwang.com
   up: 80
@@ -105,9 +105,9 @@ proxies:
   - h3
 - name: Russia 2
   type: hysteria
-  server: 46.17.43.223
-  port: 12345
-  ports: 12345
+  server: 185.22.155.71
+  port: 15424
+  ports: 30000-40000
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -119,9 +119,9 @@ proxies:
   - h3
 - name: Russia 3
   type: hysteria
-  server: 46.17.43.223
-  port: 12345
-  ports: 12345
+  server: 185.22.155.71
+  port: 15424
+  ports: 30000-40000
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -133,9 +133,9 @@ proxies:
   - h3
 - name: Russia 4
   type: hysteria
-  server: 46.17.43.223
-  port: 12345
-  ports: 12345
+  server: 185.22.155.71
+  port: 15424
+  ports: 30000-40000
   auth_str: dongtaiwang.com
   up: 80
   down: 100
