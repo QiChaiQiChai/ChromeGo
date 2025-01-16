@@ -213,8 +213,8 @@
     {
       "tag": "🇷🇺 Russia",
       "type": "hysteria",
-      "server": "46.17.43.223",
-      "server_port": 64907,
+      "server": "185.22.155.71",
+      "server_port": 15424,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -231,8 +231,8 @@
     {
       "tag": "🇷🇺 Russia 2",
       "type": "hysteria",
-      "server": "46.17.43.223",
-      "server_port": 12345,
+      "server": "185.22.155.71",
+      "server_port": 15424,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -249,8 +249,8 @@
     {
       "tag": "🇷🇺 Russia 3",
       "type": "hysteria",
-      "server": "46.17.43.223",
-      "server_port": 12345,
+      "server": "185.22.155.71",
+      "server_port": 15424,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -267,8 +267,8 @@
     {
       "tag": "🇷🇺 Russia 4",
       "type": "hysteria",
-      "server": "46.17.43.223",
-      "server_port": 12345,
+      "server": "185.22.155.71",
+      "server_port": 15424,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
