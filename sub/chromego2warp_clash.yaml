@@ -53,27 +53,29 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: France
+- name: Russia
   type: hysteria
-  server: 195.154.184.5
-  port: 22787
+  server: 185.22.155.71
+  port: 15424
   ports: 30000-40000
   auth_str: dongtaiwang.com
+  obfs: dongtaiwang.com
   alpn:
   - h3
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: France 2
+- name: Russia 2
   type: hysteria
-  server: 195.154.184.5
-  port: 22787
+  server: 185.22.155.71
+  port: 15424
   ports: 30000-40000
   auth_str: dongtaiwang.com
+  obfs: dongtaiwang.com
   alpn:
   - h3
-  sni: bing.com
+  sni: www.bing.com
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
@@ -89,34 +91,6 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: Russia
-  type: hysteria
-  server: 185.22.155.71
-  port: 15424
-  ports: 30000-40000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: Russia 2
-  type: hysteria
-  server: 185.22.155.71
-  port: 15424
-  ports: 30000-40000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
 - name: Russia 3
   type: hysteria
   server: 185.22.155.71
@@ -146,21 +120,33 @@ proxies:
   alpn:
   - h3
 - name: Russia 5
-  type: hysteria2
-  server: 46.17.41.189
-  port: 50717
-  password: dongtaiwang.com
+  type: hysteria
+  server: 185.22.155.71
+  port: 15424
+  ports: 30000-40000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
   fast-open: true
-  sni: www.bing.com
+  protocol: udp
+  sni: bing.com
   skip-cert-verify: true
+  alpn:
+  - h3
 - name: Russia 6
-  type: hysteria2
-  server: 46.17.41.189
-  port: 50717
-  password: dongtaiwang.com
+  type: hysteria
+  server: 185.22.155.71
+  port: 15424
+  ports: 30000-40000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
   fast-open: true
-  sni: www.bing.com
+  protocol: udp
+  sni: bing.com
   skip-cert-verify: true
+  alpn:
+  - h3
 - name: Russia 7
   type: hysteria2
   server: 46.17.41.189
@@ -170,6 +156,22 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 8
+  type: hysteria2
+  server: 46.17.41.189
+  port: 50717
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: Russia 9
+  type: hysteria2
+  server: 46.17.41.189
+  port: 50717
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: Russia 10
   type: hysteria2
   server: 46.17.41.189
   port: 50717
@@ -199,47 +201,47 @@ proxy-groups:
   tolerance: 50
   proxies:
   - United States
-  - France
-  - France 2
-  - United States 2
   - Russia
   - Russia 2
+  - United States 2
   - Russia 3
   - Russia 4
   - Russia 5
   - Russia 6
   - Russia 7
   - Russia 8
+  - Russia 9
+  - Russia 10
 - name: 手动选择
   type: select
   proxies:
   - United States
-  - France
-  - France 2
-  - United States 2
   - Russia
   - Russia 2
+  - United States 2
   - Russia 3
   - Russia 4
   - Russia 5
   - Russia 6
   - Russia 7
   - Russia 8
+  - Russia 9
+  - Russia 10
 - name: 负载均衡
   type: load-balance
   proxies:
   - United States
-  - France
-  - France 2
-  - United States 2
   - Russia
   - Russia 2
+  - United States 2
   - Russia 3
   - Russia 4
   - Russia 5
   - Russia 6
   - Russia 7
   - Russia 8
+  - Russia 9
+  - Russia 10
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
