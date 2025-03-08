@@ -163,7 +163,7 @@
       "tag": "🇷🇺 Russia",
       "type": "hysteria",
       "server": "185.22.155.71",
-      "server_port": 63717,
+      "server_port": 24342,
       "up_mbps": 50,
       "down_mbps": 80,
       "auth_str": "",
@@ -174,14 +174,13 @@
         "alpn": [
           "h3"
         ]
-      },
-      "obfs": "dongtaiwang.com"
+      }
     },
     {
       "tag": "🇷🇺 Russia 2",
       "type": "hysteria",
       "server": "185.22.155.71",
-      "server_port": 63717,
+      "server_port": 24342,
       "up_mbps": 50,
       "down_mbps": 80,
       "auth_str": "",
@@ -192,8 +191,7 @@
         "alpn": [
           "h3"
         ]
-      },
-      "obfs": "dongtaiwang.com"
+      }
     },
     {
       "tag": "🇺🇸 United States 2",
@@ -216,7 +214,7 @@
       "tag": "🇷🇺 Russia 3",
       "type": "hysteria",
       "server": "185.22.155.71",
-      "server_port": 63717,
+      "server_port": 24342,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -227,14 +225,13 @@
         "alpn": [
           "h3"
         ]
-      },
-      "obfs": "dongtaiwang.com"
+      }
     },
     {
       "tag": "🇷🇺 Russia 4",
       "type": "hysteria",
       "server": "185.22.155.71",
-      "server_port": 63717,
+      "server_port": 24342,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -245,14 +242,13 @@
         "alpn": [
           "h3"
         ]
-      },
-      "obfs": "dongtaiwang.com"
+      }
     },
     {
       "tag": "🇷🇺 Russia 5",
       "type": "hysteria",
       "server": "185.22.155.71",
-      "server_port": 63717,
+      "server_port": 24342,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -263,14 +259,13 @@
         "alpn": [
           "h3"
         ]
-      },
-      "obfs": "dongtaiwang.com"
+      }
     },
     {
       "tag": "🇷🇺 Russia 6",
       "type": "hysteria",
       "server": "185.22.155.71",
-      "server_port": 63717,
+      "server_port": 24342,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -281,8 +276,7 @@
         "alpn": [
           "h3"
         ]
-      },
-      "obfs": "dongtaiwang.com"
+      }
     },
     {
       "tag": "🇷🇺 Russia 7",
