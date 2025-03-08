@@ -39,10 +39,8 @@ proxies:
 - name: Russia
   type: hysteria
   server: 185.22.155.71
-  port: 63717
-  ports: 40000-50000
+  port: 24342
   auth_str: dongtaiwang.com
-  obfs: dongtaiwang.com
   alpn:
   - h3
   sni: www.bing.com
@@ -52,10 +50,8 @@ proxies:
 - name: Russia 2
   type: hysteria
   server: 185.22.155.71
-  port: 63717
-  ports: 40000-50000
+  port: 24342
   auth_str: dongtaiwang.com
-  obfs: dongtaiwang.com
   alpn:
   - h3
   sni: www.bing.com
@@ -76,8 +72,8 @@ proxies:
 - name: Russia 3
   type: hysteria
   server: 185.22.155.71
-  port: 63717
-  ports: 40000-50000
+  port: 24342
+  ports: 24342
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -90,8 +86,8 @@ proxies:
 - name: Russia 4
   type: hysteria
   server: 185.22.155.71
-  port: 63717
-  ports: 40000-50000
+  port: 24342
+  ports: 24342
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -104,8 +100,8 @@ proxies:
 - name: Russia 5
   type: hysteria
   server: 185.22.155.71
-  port: 63717
-  ports: 40000-50000
+  port: 24342
+  ports: 24342
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -118,8 +114,8 @@ proxies:
 - name: Russia 6
   type: hysteria
   server: 185.22.155.71
-  port: 63717
-  ports: 40000-50000
+  port: 24342
+  ports: 24342
   auth_str: dongtaiwang.com
   up: 80
   down: 100
