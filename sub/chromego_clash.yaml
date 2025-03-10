@@ -40,7 +40,6 @@ proxies:
   type: hysteria
   server: 108.181.24.77
   port: 11512
-  ports: 20000-30000
   auth-str: dongtaiwang.com
   sni: apple.com
   skip-cert-verify: true
@@ -115,9 +114,9 @@ proxies:
   - h3
 - name: Russia 5
   type: hysteria
-  server: 185.22.155.71
-  port: 10803
-  ports: 10803
+  server: 46.17.41.174
+  port: 10469
+  ports: 10469
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -129,32 +128,32 @@ proxies:
   - h3
 - name: Russia 6
   type: hysteria2
-  server: 46.17.41.189
-  port: 51224
+  server: 46.29.163.171
+  port: 18626
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 7
   type: hysteria2
-  server: 46.17.41.189
-  port: 51224
+  server: 46.29.163.171
+  port: 18626
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 8
   type: hysteria2
-  server: 46.17.41.189
-  port: 51224
+  server: 46.29.163.171
+  port: 18626
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 9
   type: hysteria2
-  server: 46.17.41.189
-  port: 51224
+  server: 46.29.163.171
+  port: 18626
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
