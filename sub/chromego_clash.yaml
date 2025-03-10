@@ -52,7 +52,7 @@ proxies:
 - name: Russia
   type: hysteria
   server: 185.22.155.71
-  port: 24342
+  port: 10803
   auth_str: dongtaiwang.com
   alpn:
   - h3
@@ -74,8 +74,8 @@ proxies:
 - name: Russia 2
   type: hysteria
   server: 185.22.155.71
-  port: 24342
-  ports: 24342
+  port: 10803
+  ports: 10803
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -88,8 +88,8 @@ proxies:
 - name: Russia 3
   type: hysteria
   server: 185.22.155.71
-  port: 24342
-  ports: 24342
+  port: 10803
+  ports: 10803
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -102,8 +102,8 @@ proxies:
 - name: Russia 4
   type: hysteria
   server: 185.22.155.71
-  port: 24342
-  ports: 24342
+  port: 10803
+  ports: 10803
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -116,8 +116,8 @@ proxies:
 - name: Russia 5
   type: hysteria
   server: 185.22.155.71
-  port: 24342
-  ports: 24342
+  port: 10803
+  ports: 10803
   auth_str: dongtaiwang.com
   up: 80
   down: 100
