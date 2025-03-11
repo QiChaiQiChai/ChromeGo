@@ -102,9 +102,9 @@ proxies:
   - h3
 - name: Russia 3
   type: hysteria
-  server: 185.22.155.71
-  port: 10803
-  ports: 10803
+  server: 46.17.41.174
+  port: 10469
+  ports: 10469
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -144,11 +144,19 @@ proxies:
   - h3
 - name: Russia 6
   type: hysteria2
-  server: 46.29.163.171
-  port: 18626
+  server: 46.17.41.217
+  port: 37481
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
+  skip-cert-verify: true
+- name: United States 4
+  type: hysteria2
+  server: 108.181.5.133
+  port: 15544
+  password: dongtaiwang.com
+  fast-open: true
+  sni: apple.com
   skip-cert-verify: true
 - name: Russia 7
   type: hysteria2
@@ -160,16 +168,8 @@ proxies:
   skip-cert-verify: true
 - name: Russia 8
   type: hysteria2
-  server: 46.29.163.171
-  port: 18626
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: Russia 9
-  type: hysteria2
-  server: 46.29.163.171
-  port: 18626
+  server: 46.17.41.217
+  port: 37481
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -204,9 +204,9 @@ proxy-groups:
   - Russia 4
   - Russia 5
   - Russia 6
+  - United States 4
   - Russia 7
   - Russia 8
-  - Russia 9
 - name: 手动选择
   type: select
   proxies:
@@ -219,9 +219,9 @@ proxy-groups:
   - Russia 4
   - Russia 5
   - Russia 6
+  - United States 4
   - Russia 7
   - Russia 8
-  - Russia 9
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -234,9 +234,9 @@ proxy-groups:
   - Russia 4
   - Russia 5
   - Russia 6
+  - United States 4
   - Russia 7
   - Russia 8
-  - Russia 9
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
