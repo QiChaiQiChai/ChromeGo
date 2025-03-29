@@ -129,31 +129,31 @@ proxies:
 - name: Russia 6
   type: hysteria2
   server: 46.17.41.217
-  port: 37481
+  port: 4395
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: United States 4
-  type: hysteria2
-  server: 108.181.5.133
-  port: 15544
-  password: dongtaiwang.com
-  fast-open: true
-  sni: apple.com
-  skip-cert-verify: true
 - name: Russia 7
   type: hysteria2
   server: 46.29.163.171
-  port: 18626
+  port: 35751
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 8
   type: hysteria2
+  server: 46.29.163.171
+  port: 35751
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: Russia 9
+  type: hysteria2
   server: 46.17.41.217
-  port: 37481
+  port: 4395
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -173,9 +173,9 @@ proxy-groups:
   - Russia 4
   - Russia 5
   - Russia 6
-  - United States 4
   - Russia 7
   - Russia 8
+  - Russia 9
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -191,9 +191,9 @@ proxy-groups:
   - Russia 4
   - Russia 5
   - Russia 6
-  - United States 4
   - Russia 7
   - Russia 8
+  - Russia 9
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
