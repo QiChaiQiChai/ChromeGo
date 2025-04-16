@@ -148,7 +148,7 @@ proxies:
   port: 64816
   password: dongtaiwang.com
   fast-open: true
-  sni: apple.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 7
   type: hysteria2
@@ -156,7 +156,7 @@ proxies:
   port: 32555
   password: dongtaiwang.com
   fast-open: true
-  sni: apple.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 8
   type: hysteria2
@@ -164,7 +164,7 @@ proxies:
   port: 32555
   password: dongtaiwang.com
   fast-open: true
-  sni: apple.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 9
   type: hysteria2
@@ -172,7 +172,7 @@ proxies:
   port: 64816
   password: dongtaiwang.com
   fast-open: true
-  sni: apple.com
+  sni: www.bing.com
   skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
