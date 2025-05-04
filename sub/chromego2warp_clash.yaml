@@ -100,11 +100,11 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Russia 3
+- name: United States 4
   type: hysteria
-  server: 46.17.41.174
-  port: 10469
-  ports: 10469
+  server: 208.87.243.187
+  port: 40528
+  ports: 40528
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -114,7 +114,7 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Russia 4
+- name: Russia 3
   type: hysteria
   server: 185.22.155.71
   port: 10803
@@ -128,11 +128,11 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Russia 5
+- name: United States 5
   type: hysteria
-  server: 46.17.41.174
-  port: 10469
-  ports: 10469
+  server: 208.87.243.187
+  port: 40528
+  ports: 40528
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -142,6 +142,22 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: Russia 4
+  type: hysteria2
+  server: hy2.694463.xyz
+  port: 10011
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: Russia 5
+  type: hysteria2
+  server: hy2.694463.xyz
+  port: 10011
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
 - name: Russia 6
   type: hysteria2
   server: hy2.694463.xyz
@@ -151,22 +167,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 7
-  type: hysteria2
-  server: hy2.694463.xyz
-  port: 10011
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: Russia 8
-  type: hysteria2
-  server: hy2.694463.xyz
-  port: 10011
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: Russia 9
   type: hysteria2
   server: hy2.694463.xyz
   port: 10011
@@ -200,13 +200,13 @@ proxy-groups:
   - Russia
   - United States 3
   - Russia 2
+  - United States 4
   - Russia 3
+  - United States 5
   - Russia 4
   - Russia 5
   - Russia 6
   - Russia 7
-  - Russia 8
-  - Russia 9
 - name: 手动选择
   type: select
   proxies:
@@ -215,13 +215,13 @@ proxy-groups:
   - Russia
   - United States 3
   - Russia 2
+  - United States 4
   - Russia 3
+  - United States 5
   - Russia 4
   - Russia 5
   - Russia 6
   - Russia 7
-  - Russia 8
-  - Russia 9
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -230,13 +230,13 @@ proxy-groups:
   - Russia
   - United States 3
   - Russia 2
+  - United States 4
   - Russia 3
+  - United States 5
   - Russia 4
   - Russia 5
   - Russia 6
   - Russia 7
-  - Russia 8
-  - Russia 9
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
