@@ -84,20 +84,6 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 4
-  type: hysteria
-  server: 208.87.243.187
-  port: 40528
-  ports: 40528
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
 - name: Russia 3
   type: hysteria
   server: 185.22.155.71
@@ -112,11 +98,11 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: United States 5
+- name: Russia 4
   type: hysteria
-  server: 208.87.243.187
-  port: 40528
-  ports: 40528
+  server: 185.22.155.71
+  port: 10803
+  ports: 10803
   auth_str: dongtaiwang.com
   up: 80
   down: 100
@@ -126,22 +112,20 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Russia 4
-  type: hysteria2
-  server: hy2.694463.xyz
-  port: 10011
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 - name: Russia 5
-  type: hysteria2
-  server: hy2.694463.xyz
-  port: 10011
-  password: dongtaiwang.com
+  type: hysteria
+  server: 185.22.155.71
+  port: 10803
+  ports: 10803
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
   fast-open: true
-  sni: www.bing.com
+  protocol: udp
+  sni: apple.com
   skip-cert-verify: true
+  alpn:
+  - h3
 - name: Russia 6
   type: hysteria2
   server: hy2.694463.xyz
@@ -151,6 +135,22 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - name: Russia 7
+  type: hysteria2
+  server: hy2.694463.xyz
+  port: 10011
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: Russia 8
+  type: hysteria2
+  server: hy2.694463.xyz
+  port: 10011
+  password: dongtaiwang.com
+  fast-open: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: Russia 9
   type: hysteria2
   server: hy2.694463.xyz
   port: 10011
@@ -169,13 +169,13 @@ proxy-groups:
   - Russia
   - United States 3
   - Russia 2
-  - United States 4
   - Russia 3
-  - United States 5
   - Russia 4
   - Russia 5
   - Russia 6
   - Russia 7
+  - Russia 8
+  - Russia 9
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -187,13 +187,13 @@ proxy-groups:
   - Russia
   - United States 3
   - Russia 2
-  - United States 4
   - Russia 3
-  - United States 5
   - Russia 4
   - Russia 5
   - Russia 6
   - Russia 7
+  - Russia 8
+  - Russia 9
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
