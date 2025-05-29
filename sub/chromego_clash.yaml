@@ -128,7 +128,7 @@ proxies:
   - h3
 - name: Russia 6
   type: hysteria2
-  server: hy2.694463.xyz
+  server: 45.129.2.108
   port: 30033
   password: dongtaiwang.com
   fast-open: true
@@ -136,7 +136,7 @@ proxies:
   skip-cert-verify: true
 - name: Russia 7
   type: hysteria2
-  server: hy2.694463.xyz
+  server: 46.17.41.217
   port: 30033
   password: dongtaiwang.com
   fast-open: true
