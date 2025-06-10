@@ -129,7 +129,7 @@ proxies:
 - name: Russia 6
   type: hysteria2
   server: 45.129.2.108
-  port: 30033
+  port: 50850
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
