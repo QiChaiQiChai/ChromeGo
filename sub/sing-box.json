@@ -105,8 +105,8 @@
         "🇷🇺 Russia 5",
         "🇷🇺 Russia 6",
         "🇷🇺 Russia 7",
-        "🇷🇺 Russia 8",
-        "🇷🇺 Russia 9"
+        "🇳🇱 Netherlands",
+        "🇳🇱 Netherlands 2"
       ]
     },
     {
@@ -123,8 +123,8 @@
         "🇷🇺 Russia 5",
         "🇷🇺 Russia 6",
         "🇷🇺 Russia 7",
-        "🇷🇺 Russia 8",
-        "🇷🇺 Russia 9"
+        "🇳🇱 Netherlands",
+        "🇳🇱 Netherlands 2"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -313,10 +313,10 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia 8",
+      "tag": "🇳🇱 Netherlands",
       "type": "hysteria2",
-      "server": "45.129.2.248",
-      "server_port": 23579,
+      "server": "163.172.217.10",
+      "server_port": 10011,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -330,10 +330,10 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia 9",
+      "tag": "🇳🇱 Netherlands 2",
       "type": "hysteria2",
-      "server": "45.129.2.248",
-      "server_port": 23579,
+      "server": "163.172.217.10",
+      "server_port": 10011,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
