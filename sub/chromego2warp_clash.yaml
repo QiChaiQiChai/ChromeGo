@@ -86,93 +86,93 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: United States 5
-  type: hysteria
-  server: 172.245.235.201
-  port: 38814
-  ports: 38814
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: United States 6
-  type: hysteria
-  server: 172.245.235.201
-  port: 38814
-  ports: 38814
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: United States 7
-  type: hysteria
-  server: 172.245.235.201
-  port: 38814
-  ports: 38814
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: United States 8
-  type: hysteria
-  server: 172.245.235.201
-  port: 38814
-  ports: 38814
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: Russia
-  type: hysteria2
-  server: 45.129.2.108
-  port: 50850
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: Russia 2
-  type: hysteria2
-  server: 46.17.41.217
-  port: 30033
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 - name: Netherlands
-  type: hysteria2
-  server: 163.172.217.10
-  port: 10011
-  password: dongtaiwang.com
+  type: hysteria
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
   fast-open: true
-  sni: www.bing.com
+  protocol: udp
+  sni: apple.com
   skip-cert-verify: true
+  alpn:
+  - h3
 - name: Netherlands 2
+  type: hysteria
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: Netherlands 3
+  type: hysteria
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: Netherlands 4
+  type: hysteria
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: France
   type: hysteria2
-  server: 163.172.217.10
-  port: 10011
+  server: 64.31.63.57
+  port: 44462
   password: dongtaiwang.com
   fast-open: true
-  sni: www.bing.com
+  sni: apple.com
+  skip-cert-verify: true
+- name: France 2
+  type: hysteria2
+  server: 64.31.63.57
+  port: 44462
+  password: dongtaiwang.com
+  fast-open: true
+  sni: apple.com
+  skip-cert-verify: true
+- name: France 3
+  type: hysteria2
+  server: 64.31.63.57
+  port: 44462
+  password: dongtaiwang.com
+  fast-open: true
+  sni: apple.com
+  skip-cert-verify: true
+- name: France 4
+  type: hysteria2
+  server: 64.31.63.57
+  port: 44462
+  password: dongtaiwang.com
+  fast-open: true
+  sni: apple.com
   skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
@@ -199,14 +199,14 @@ proxy-groups:
   - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
-  - United States 7
-  - United States 8
-  - Russia
-  - Russia 2
   - Netherlands
   - Netherlands 2
+  - Netherlands 3
+  - Netherlands 4
+  - France
+  - France 2
+  - France 3
+  - France 4
 - name: 手动选择
   type: select
   proxies:
@@ -214,14 +214,14 @@ proxy-groups:
   - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
-  - United States 7
-  - United States 8
-  - Russia
-  - Russia 2
   - Netherlands
   - Netherlands 2
+  - Netherlands 3
+  - Netherlands 4
+  - France
+  - France 2
+  - France 3
+  - France 4
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -229,14 +229,14 @@ proxy-groups:
   - United States 2
   - United States 3
   - United States 4
-  - United States 5
-  - United States 6
-  - United States 7
-  - United States 8
-  - Russia
-  - Russia 2
   - Netherlands
   - Netherlands 2
+  - Netherlands 3
+  - Netherlands 4
+  - France
+  - France 2
+  - France 3
+  - France 4
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
