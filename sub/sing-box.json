@@ -103,10 +103,10 @@
         "🇳🇱 Netherlands 2",
         "🇳🇱 Netherlands 3",
         "🇳🇱 Netherlands 4",
-        "🇫🇷 France",
-        "🇫🇷 France 2",
-        "🇫🇷 France 3",
-        "🇫🇷 France 4"
+        "🇺🇸 United States 5",
+        "🇺🇸 United States 6",
+        "🇺🇸 United States 7",
+        "🇺🇸 United States 8"
       ]
     },
     {
@@ -121,10 +121,10 @@
         "🇳🇱 Netherlands 2",
         "🇳🇱 Netherlands 3",
         "🇳🇱 Netherlands 4",
-        "🇫🇷 France",
-        "🇫🇷 France 2",
-        "🇫🇷 France 3",
-        "🇫🇷 France 4"
+        "🇺🇸 United States 5",
+        "🇺🇸 United States 6",
+        "🇺🇸 United States 7",
+        "🇺🇸 United States 8"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -279,10 +279,10 @@
       }
     },
     {
-      "tag": "🇫🇷 France",
+      "tag": "🇺🇸 United States 5",
       "type": "hysteria2",
-      "server": "64.31.63.57",
-      "server_port": 44462,
+      "server": "104.168.10.176",
+      "server_port": 35205,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -293,13 +293,16 @@
         "alpn": [
           "h3"
         ]
-      }
+      },
+      "server_ports": [
+        "10000:20000"
+      ]
     },
     {
-      "tag": "🇫🇷 France 2",
+      "tag": "🇺🇸 United States 6",
       "type": "hysteria2",
-      "server": "64.31.63.57",
-      "server_port": 44462,
+      "server": "104.168.10.176",
+      "server_port": 35205,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -310,13 +313,16 @@
         "alpn": [
           "h3"
         ]
-      }
+      },
+      "server_ports": [
+        "10000:20000"
+      ]
     },
     {
-      "tag": "🇫🇷 France 3",
+      "tag": "🇺🇸 United States 7",
       "type": "hysteria2",
-      "server": "64.31.63.57",
-      "server_port": 44462,
+      "server": "104.168.10.176",
+      "server_port": 35205,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -327,13 +333,16 @@
         "alpn": [
           "h3"
         ]
-      }
+      },
+      "server_ports": [
+        "10000:20000"
+      ]
     },
     {
-      "tag": "🇫🇷 France 4",
+      "tag": "🇺🇸 United States 8",
       "type": "hysteria2",
-      "server": "64.31.63.57",
-      "server_port": 44462,
+      "server": "104.168.10.176",
+      "server_port": 35205,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -344,7 +353,10 @@
         "alpn": [
           "h3"
         ]
-      }
+      },
+      "server_ports": [
+        "10000:20000"
+      ]
     }
   ],
   "route": {
