@@ -126,34 +126,34 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: France
+- name: United States 5
   type: hysteria2
-  server: 64.31.63.57
-  port: 44462
+  server: 104.168.10.176
+  port: 35205
   password: dongtaiwang.com
   fast-open: true
   sni: apple.com
   skip-cert-verify: true
-- name: France 2
+- name: United States 6
   type: hysteria2
-  server: 64.31.63.57
-  port: 44462
+  server: 104.168.10.176
+  port: 35205
   password: dongtaiwang.com
   fast-open: true
   sni: apple.com
   skip-cert-verify: true
-- name: France 3
+- name: United States 7
   type: hysteria2
-  server: 64.31.63.57
-  port: 44462
+  server: 104.168.10.176
+  port: 35205
   password: dongtaiwang.com
   fast-open: true
   sni: apple.com
   skip-cert-verify: true
-- name: France 4
+- name: United States 8
   type: hysteria2
-  server: 64.31.63.57
-  port: 44462
+  server: 104.168.10.176
+  port: 35205
   password: dongtaiwang.com
   fast-open: true
   sni: apple.com
@@ -172,10 +172,10 @@ proxy-groups:
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
-  - France
-  - France 2
-  - France 3
-  - France 4
+  - United States 5
+  - United States 6
+  - United States 7
+  - United States 8
 - name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -190,10 +190,10 @@ proxy-groups:
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
-  - France
-  - France 2
-  - France 3
-  - France 4
+  - United States 5
+  - United States 6
+  - United States 7
+  - United States 8
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
