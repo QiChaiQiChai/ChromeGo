@@ -64,10 +64,11 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: United States 3
+- name: Netherlands
   type: hysteria
-  server: 172.245.235.201
-  port: 38814
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
   auth_str: dongtaiwang.com
   alpn:
   - h3
@@ -75,7 +76,7 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: United States 4
+- name: United States 3
   type: hysteria
   server: 208.87.243.151
   port: 17549
@@ -86,20 +87,6 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: Netherlands
-  type: hysteria
-  server: 109.104.153.91
-  port: 37519
-  ports: 10000-20000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
 - name: Netherlands 2
   type: hysteria
   server: 109.104.153.91
@@ -142,6 +129,28 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: Netherlands 5
+  type: hysteria
+  server: 109.104.153.91
+  port: 37519
+  ports: 10000-20000
+  auth_str: dongtaiwang.com
+  up: 80
+  down: 100
+  fast-open: true
+  protocol: udp
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+- name: United States 4
+  type: hysteria2
+  server: 104.168.10.176
+  port: 35205
+  password: dongtaiwang.com
+  fast-open: true
+  sni: apple.com
+  skip-cert-verify: true
 - name: United States 5
   type: hysteria2
   server: 104.168.10.176
@@ -159,14 +168,6 @@ proxies:
   sni: apple.com
   skip-cert-verify: true
 - name: United States 7
-  type: hysteria2
-  server: 104.168.10.176
-  port: 35205
-  password: dongtaiwang.com
-  fast-open: true
-  sni: apple.com
-  skip-cert-verify: true
-- name: United States 8
   type: hysteria2
   server: 104.168.10.176
   port: 35205
@@ -197,46 +198,46 @@ proxy-groups:
   proxies:
   - United States
   - United States 2
-  - United States 3
-  - United States 4
   - Netherlands
+  - United States 3
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
+  - Netherlands 5
+  - United States 4
   - United States 5
   - United States 6
   - United States 7
-  - United States 8
 - name: 手动选择
   type: select
   proxies:
   - United States
   - United States 2
-  - United States 3
-  - United States 4
   - Netherlands
+  - United States 3
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
+  - Netherlands 5
+  - United States 4
   - United States 5
   - United States 6
   - United States 7
-  - United States 8
 - name: 负载均衡
   type: load-balance
   proxies:
   - United States
   - United States 2
-  - United States 3
-  - United States 4
   - Netherlands
+  - United States 3
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
+  - Netherlands 5
+  - United States 4
   - United States 5
   - United States 6
   - United States 7
-  - United States 8
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
