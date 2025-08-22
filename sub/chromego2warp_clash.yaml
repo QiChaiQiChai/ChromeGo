@@ -41,9 +41,9 @@ proxies:
   - 1.1.1.1
   - 8.8.8.8
   dialer-proxy: WARP前置节点
-- name: United States
+- name: Unknown
   type: hysteria
-  server: 208.87.243.151
+  server: 2604:6600:2004::18b
   port: 38845
   auth_str: dongtaiwang.com
   alpn:
@@ -52,7 +52,7 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: United States 2
+- name: United States
   type: hysteria
   server: 108.181.24.77
   port: 37872
@@ -76,9 +76,20 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: United States 3
+- name: United States 2
   type: hysteria
   server: 208.87.243.151
+  port: 38845
+  auth_str: dongtaiwang.com
+  alpn:
+  - h3
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
+- name: Unknown 2
+  type: hysteria
+  server: 2604:6600:2004::18b
   port: 38845
   auth_str: dongtaiwang.com
   alpn:
@@ -143,6 +154,14 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
+- name: United States 3
+  type: hysteria2
+  server: 104.168.10.176
+  port: 35205
+  password: dongtaiwang.com
+  fast-open: true
+  sni: apple.com
+  skip-cert-verify: true
 - name: United States 4
   type: hysteria2
   server: 104.168.10.176
@@ -160,14 +179,6 @@ proxies:
   sni: apple.com
   skip-cert-verify: true
 - name: United States 6
-  type: hysteria2
-  server: 104.168.10.176
-  port: 35205
-  password: dongtaiwang.com
-  fast-open: true
-  sni: apple.com
-  skip-cert-verify: true
-- name: United States 7
   type: hysteria2
   server: 104.168.10.176
   port: 35205
@@ -196,48 +207,51 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
+  - Unknown
   - United States
-  - United States 2
   - Netherlands
-  - United States 3
+  - United States 2
+  - Unknown 2
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
   - Netherlands 5
+  - United States 3
   - United States 4
   - United States 5
   - United States 6
-  - United States 7
 - name: 手动选择
   type: select
   proxies:
+  - Unknown
   - United States
-  - United States 2
   - Netherlands
-  - United States 3
+  - United States 2
+  - Unknown 2
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
   - Netherlands 5
+  - United States 3
   - United States 4
   - United States 5
   - United States 6
-  - United States 7
 - name: 负载均衡
   type: load-balance
   proxies:
+  - Unknown
   - United States
-  - United States 2
   - Netherlands
-  - United States 3
+  - United States 2
+  - Unknown 2
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
   - Netherlands 5
+  - United States 3
   - United States 4
   - United States 5
   - United States 6
-  - United States 7
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
