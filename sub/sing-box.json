@@ -95,36 +95,38 @@
       "type": "selector",
       "outbounds": [
         "auto",
+        "Unknown",
         "🇺🇸 United States",
-        "🇺🇸 United States 2",
         "🇳🇱 Netherlands",
-        "🇺🇸 United States 3",
+        "🇺🇸 United States 2",
+        "Unknown 2",
         "🇳🇱 Netherlands 2",
         "🇳🇱 Netherlands 3",
         "🇳🇱 Netherlands 4",
         "🇳🇱 Netherlands 5",
+        "🇺🇸 United States 3",
         "🇺🇸 United States 4",
         "🇺🇸 United States 5",
-        "🇺🇸 United States 6",
-        "🇺🇸 United States 7"
+        "🇺🇸 United States 6"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
+        "Unknown",
         "🇺🇸 United States",
-        "🇺🇸 United States 2",
         "🇳🇱 Netherlands",
-        "🇺🇸 United States 3",
+        "🇺🇸 United States 2",
+        "Unknown 2",
         "🇳🇱 Netherlands 2",
         "🇳🇱 Netherlands 3",
         "🇳🇱 Netherlands 4",
         "🇳🇱 Netherlands 5",
+        "🇺🇸 United States 3",
         "🇺🇸 United States 4",
         "🇺🇸 United States 5",
-        "🇺🇸 United States 6",
-        "🇺🇸 United States 7"
+        "🇺🇸 United States 6"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -143,9 +145,9 @@
       "tag": "block"
     },
     {
-      "tag": "🇺🇸 United States",
+      "tag": "Unknown",
       "type": "hysteria",
-      "server": "208.87.243.151",
+      "server": "2604:6600:2004::18b",
       "server_port": 38845,
       "up_mbps": 50,
       "down_mbps": 80,
@@ -160,7 +162,7 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 2",
+      "tag": "🇺🇸 United States",
       "type": "hysteria",
       "server": "108.181.24.77",
       "server_port": 37872,
@@ -194,9 +196,26 @@
       }
     },
     {
-      "tag": "🇺🇸 United States 3",
+      "tag": "🇺🇸 United States 2",
       "type": "hysteria",
       "server": "208.87.243.151",
+      "server_port": 38845,
+      "up_mbps": 50,
+      "down_mbps": 80,
+      "auth_str": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Unknown 2",
+      "type": "hysteria",
+      "server": "2604:6600:2004::18b",
       "server_port": 38845,
       "up_mbps": 50,
       "down_mbps": 80,
@@ -279,6 +298,26 @@
       }
     },
     {
+      "tag": "🇺🇸 United States 3",
+      "type": "hysteria2",
+      "server": "104.168.10.176",
+      "server_port": 35205,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      },
+      "server_ports": [
+        "10000:20000"
+      ]
+    },
+    {
       "tag": "🇺🇸 United States 4",
       "type": "hysteria2",
       "server": "104.168.10.176",
@@ -320,26 +359,6 @@
     },
     {
       "tag": "🇺🇸 United States 6",
-      "type": "hysteria2",
-      "server": "104.168.10.176",
-      "server_port": 35205,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "server_ports": [
-        "10000:20000"
-      ]
-    },
-    {
-      "tag": "🇺🇸 United States 7",
       "type": "hysteria2",
       "server": "104.168.10.176",
       "server_port": 35205,
