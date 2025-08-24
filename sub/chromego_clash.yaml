@@ -26,6 +26,30 @@ dns:
     - 240.0.0.0/4
 proxies:
 - name: Unknown
+  type: hysteria2
+  server: 2001:bc8:32d7:302::11
+  port: 33563
+  password: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: Unknown 2
+  type: hysteria2
+  server: 2001:bc8:32d7:302::11
+  port: 33563
+  password: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: Unknown 3
   type: hysteria
   server: 2604:6600:2004::18b
   port: 38845
@@ -71,7 +95,7 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: Unknown 2
+- name: Unknown 4
   type: hysteria
   server: 2604:6600:2004::18b
   port: 38845
@@ -177,10 +201,12 @@ proxy-groups:
   - 自动选择
   - DIRECT
   - Unknown
+  - Unknown 2
+  - Unknown 3
   - United States
   - Netherlands
   - United States 2
-  - Unknown 2
+  - Unknown 4
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
@@ -196,10 +222,12 @@ proxy-groups:
   tolerance: 50
   proxies:
   - Unknown
+  - Unknown 2
+  - Unknown 3
   - United States
   - Netherlands
   - United States 2
-  - Unknown 2
+  - Unknown 4
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
