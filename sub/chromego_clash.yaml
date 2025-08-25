@@ -28,7 +28,7 @@ proxies:
 - name: Unknown
   type: hysteria2
   server: 2001:bc8:32d7:302::11
-  port: 33563
+  port: 20088
   password: dongtaiwang.com
   sni: apple.com
   skip-cert-verify: true
@@ -40,7 +40,7 @@ proxies:
 - name: Unknown 2
   type: hysteria2
   server: 2001:bc8:32d7:302::11
-  port: 33563
+  port: 20088
   password: dongtaiwang.com
   sni: apple.com
   skip-cert-verify: true
@@ -63,6 +63,18 @@ proxies:
   udp-relay-mode: native
   congestion-controller: bbr
 - name: Unknown 4
+  type: hysteria2
+  server: 2001:bc8:32d7:302::17
+  port: 20088
+  password: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: Unknown 5
   server: 2001:bc8:32d7:302::16
   port: 34997
   type: tuic
@@ -75,7 +87,19 @@ proxies:
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: Unknown 5
+- name: Unknown 6
+  type: hysteria2
+  server: 2001:bc8:32d7:302::17
+  port: 20088
+  password: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: Unknown 7
   type: hysteria
   server: 2604:6600:2004::18b
   port: 38845
@@ -121,7 +145,7 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: Unknown 6
+- name: Unknown 8
   type: hysteria
   server: 2604:6600:2004::18b
   port: 38845
@@ -231,10 +255,12 @@ proxy-groups:
   - Unknown 3
   - Unknown 4
   - Unknown 5
+  - Unknown 6
+  - Unknown 7
   - United States
   - Netherlands
   - United States 2
-  - Unknown 6
+  - Unknown 8
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
@@ -254,10 +280,12 @@ proxy-groups:
   - Unknown 3
   - Unknown 4
   - Unknown 5
+  - Unknown 6
+  - Unknown 7
   - United States
   - Netherlands
   - United States 2
-  - Unknown 6
+  - Unknown 8
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
