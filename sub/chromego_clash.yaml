@@ -50,6 +50,32 @@ proxies:
   up: 11 Mbps
   down: 55 Mbps
 - name: Unknown 3
+  server: 2001:bc8:32d7:302::16
+  port: 34997
+  type: tuic
+  uuid: 8687b6e0-ef24-4cd2-bcd2-02d3732bf554
+  password: dongtaiwang.com
+  alpn:
+  - h3
+  sni: bing.com
+  skip-cert-verify: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: Unknown 4
+  server: 2001:bc8:32d7:302::16
+  port: 34997
+  type: tuic
+  uuid: 8687b6e0-ef24-4cd2-bcd2-02d3732bf554
+  password: dongtaiwang.com
+  alpn:
+  - h3
+  sni: bing.com
+  skip-cert-verify: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: Unknown 5
   type: hysteria
   server: 2604:6600:2004::18b
   port: 38845
@@ -95,7 +121,7 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: Unknown 4
+- name: Unknown 6
   type: hysteria
   server: 2604:6600:2004::18b
   port: 38845
@@ -203,10 +229,12 @@ proxy-groups:
   - Unknown
   - Unknown 2
   - Unknown 3
+  - Unknown 4
+  - Unknown 5
   - United States
   - Netherlands
   - United States 2
-  - Unknown 4
+  - Unknown 6
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
@@ -224,10 +252,12 @@ proxy-groups:
   - Unknown
   - Unknown 2
   - Unknown 3
+  - Unknown 4
+  - Unknown 5
   - United States
   - Netherlands
   - United States 2
-  - Unknown 4
+  - Unknown 6
   - Netherlands 2
   - Netherlands 3
   - Netherlands 4
