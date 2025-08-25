@@ -98,10 +98,12 @@
         "Unknown",
         "Unknown 2",
         "Unknown 3",
+        "Unknown 4",
+        "Unknown 5",
         "🇺🇸 United States",
         "🇳🇱 Netherlands",
         "🇺🇸 United States 2",
-        "Unknown 4",
+        "Unknown 6",
         "🇳🇱 Netherlands 2",
         "🇳🇱 Netherlands 3",
         "🇳🇱 Netherlands 4",
@@ -119,10 +121,12 @@
         "Unknown",
         "Unknown 2",
         "Unknown 3",
+        "Unknown 4",
+        "Unknown 5",
         "🇺🇸 United States",
         "🇳🇱 Netherlands",
         "🇺🇸 United States 2",
-        "Unknown 4",
+        "Unknown 6",
         "🇳🇱 Netherlands 2",
         "🇳🇱 Netherlands 3",
         "🇳🇱 Netherlands 4",
@@ -152,7 +156,7 @@
       "tag": "Unknown",
       "type": "hysteria2",
       "server": "2001:bc8:32d7:302::11",
-      "server_port": 33563,
+      "server_port": 20088,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -169,7 +173,7 @@
       "tag": "Unknown 2",
       "type": "hysteria2",
       "server": "2001:bc8:32d7:302::11",
-      "server_port": 33563,
+      "server_port": 20088,
       "password": "dongtaiwang.com",
       "up_mbps": 10,
       "down_mbps": 100,
@@ -184,6 +188,40 @@
     },
     {
       "tag": "Unknown 3",
+      "type": "hysteria2",
+      "server": "2001:bc8:32d7:302::17",
+      "server_port": 20088,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Unknown 4",
+      "type": "hysteria2",
+      "server": "2001:bc8:32d7:302::17",
+      "server_port": 20088,
+      "password": "dongtaiwang.com",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Unknown 5",
       "type": "hysteria",
       "server": "2604:6600:2004::18b",
       "server_port": 38845,
@@ -251,7 +289,7 @@
       }
     },
     {
-      "tag": "Unknown 4",
+      "tag": "Unknown 6",
       "type": "hysteria",
       "server": "2604:6600:2004::18b",
       "server_port": 38845,
