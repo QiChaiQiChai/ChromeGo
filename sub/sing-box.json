@@ -106,11 +106,7 @@
         "🇳🇱 Netherlands",
         "🇳🇱 Netherlands 2",
         "🇳🇱 Netherlands 3",
-        "🇳🇱 Netherlands 4",
-        "🇺🇸 United States",
-        "🇺🇸 United States 2",
-        "🇺🇸 United States 3",
-        "🇺🇸 United States 4"
+        "🇳🇱 Netherlands 4"
       ]
     },
     {
@@ -128,11 +124,7 @@
         "🇳🇱 Netherlands",
         "🇳🇱 Netherlands 2",
         "🇳🇱 Netherlands 3",
-        "🇳🇱 Netherlands 4",
-        "🇺🇸 United States",
-        "🇺🇸 United States 2",
-        "🇺🇸 United States 3",
-        "🇺🇸 United States 4"
+        "🇳🇱 Netherlands 4"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -353,86 +345,6 @@
           "h3"
         ]
       }
-    },
-    {
-      "tag": "🇺🇸 United States",
-      "type": "hysteria2",
-      "server": "104.168.10.176",
-      "server_port": 35205,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "server_ports": [
-        "10000:20000"
-      ]
-    },
-    {
-      "tag": "🇺🇸 United States 2",
-      "type": "hysteria2",
-      "server": "104.168.10.176",
-      "server_port": 35205,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "server_ports": [
-        "10000:20000"
-      ]
-    },
-    {
-      "tag": "🇺🇸 United States 3",
-      "type": "hysteria2",
-      "server": "104.168.10.176",
-      "server_port": 35205,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "server_ports": [
-        "10000:20000"
-      ]
-    },
-    {
-      "tag": "🇺🇸 United States 4",
-      "type": "hysteria2",
-      "server": "104.168.10.176",
-      "server_port": 35205,
-      "password": "dongtaiwang.com",
-      "up_mbps": 10,
-      "down_mbps": 100,
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "server_ports": [
-        "10000:20000"
-      ]
     }
   ],
   "route": {
