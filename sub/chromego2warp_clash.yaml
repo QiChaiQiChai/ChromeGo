@@ -129,19 +129,7 @@ proxies:
   down: 55 Mbps
 - name: France
   type: hysteria
-  server: 62.210.127.217
-  port: 50011
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
-- name: France 2
-  type: hysteria
-  server: 62.210.127.217
+  server: 62.210.10.186
   port: 50011
   auth-str: dongtaiwang.com
   sni: apple.com
@@ -153,6 +141,18 @@ proxies:
   down: 55 Mbps
 - name: Unknown 8
   type: hysteria
+  server: 2001:bc8:32d7:158::2
+  port: 50011
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: Unknown 9
+  type: hysteria
   server: 2001:bc8:32d7:158::4
   port: 50011
   auth-str: dongtaiwang.com
@@ -163,10 +163,10 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: Netherlands
+- name: Luxembourg
   type: hysteria
-  server: 109.104.153.91
-  port: 37519
+  server: 109.104.154.97
+  port: 48429
   ports: 10000-20000
   auth_str: dongtaiwang.com
   up: 80
@@ -177,10 +177,10 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Netherlands 2
+- name: Luxembourg 2
   type: hysteria
-  server: 109.104.153.91
-  port: 37519
+  server: 109.104.154.97
+  port: 48429
   ports: 10000-20000
   auth_str: dongtaiwang.com
   up: 80
@@ -191,10 +191,10 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Netherlands 3
+- name: Luxembourg 3
   type: hysteria
-  server: 109.104.153.91
-  port: 37519
+  server: 109.104.154.97
+  port: 48429
   ports: 10000-20000
   auth_str: dongtaiwang.com
   up: 80
@@ -205,10 +205,10 @@ proxies:
   skip-cert-verify: true
   alpn:
   - h3
-- name: Netherlands 4
+- name: Luxembourg 4
   type: hysteria
-  server: 109.104.153.91
-  port: 37519
+  server: 109.104.154.97
+  port: 48429
   ports: 10000-20000
   auth_str: dongtaiwang.com
   up: 80
@@ -248,12 +248,12 @@ proxy-groups:
   - Unknown 6
   - Unknown 7
   - France
-  - France 2
   - Unknown 8
-  - Netherlands
-  - Netherlands 2
-  - Netherlands 3
-  - Netherlands 4
+  - Unknown 9
+  - Luxembourg
+  - Luxembourg 2
+  - Luxembourg 3
+  - Luxembourg 4
 - name: 手动选择
   type: select
   proxies:
@@ -265,12 +265,12 @@ proxy-groups:
   - Unknown 6
   - Unknown 7
   - France
-  - France 2
   - Unknown 8
-  - Netherlands
-  - Netherlands 2
-  - Netherlands 3
-  - Netherlands 4
+  - Unknown 9
+  - Luxembourg
+  - Luxembourg 2
+  - Luxembourg 3
+  - Luxembourg 4
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -282,12 +282,12 @@ proxy-groups:
   - Unknown 6
   - Unknown 7
   - France
-  - France 2
   - Unknown 8
-  - Netherlands
-  - Netherlands 2
-  - Netherlands 3
-  - Netherlands 4
+  - Unknown 9
+  - Luxembourg
+  - Luxembourg 2
+  - Luxembourg 3
+  - Luxembourg 4
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
