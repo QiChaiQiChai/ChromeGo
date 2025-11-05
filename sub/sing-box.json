@@ -101,12 +101,12 @@
         "Unknown 4",
         "Unknown 5",
         "🇫🇷 France",
-        "🇫🇷 France 2",
         "Unknown 6",
-        "🇳🇱 Netherlands",
-        "🇳🇱 Netherlands 2",
-        "🇳🇱 Netherlands 3",
-        "🇳🇱 Netherlands 4"
+        "Unknown 7",
+        "🇱🇺 Luxembourg",
+        "🇱🇺 Luxembourg 2",
+        "🇱🇺 Luxembourg 3",
+        "🇱🇺 Luxembourg 4"
       ]
     },
     {
@@ -119,12 +119,12 @@
         "Unknown 4",
         "Unknown 5",
         "🇫🇷 France",
-        "🇫🇷 France 2",
         "Unknown 6",
-        "🇳🇱 Netherlands",
-        "🇳🇱 Netherlands 2",
-        "🇳🇱 Netherlands 3",
-        "🇳🇱 Netherlands 4"
+        "Unknown 7",
+        "🇱🇺 Luxembourg",
+        "🇱🇺 Luxembourg 2",
+        "🇱🇺 Luxembourg 3",
+        "🇱🇺 Luxembourg 4"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -230,24 +230,7 @@
     {
       "tag": "🇫🇷 France",
       "type": "hysteria",
-      "server": "62.210.127.217",
-      "server_port": 50011,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇫🇷 France 2",
-      "type": "hysteria",
-      "server": "62.210.127.217",
+      "server": "62.210.10.186",
       "server_port": 50011,
       "up_mbps": 50,
       "down_mbps": 80,
@@ -264,6 +247,23 @@
     {
       "tag": "Unknown 6",
       "type": "hysteria",
+      "server": "2001:bc8:32d7:158::2",
+      "server_port": 50011,
+      "up_mbps": 50,
+      "down_mbps": 80,
+      "auth_str": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "Unknown 7",
+      "type": "hysteria",
       "server": "2001:bc8:32d7:158::4",
       "server_port": 50011,
       "up_mbps": 50,
@@ -279,10 +279,10 @@
       }
     },
     {
-      "tag": "🇳🇱 Netherlands",
+      "tag": "🇱🇺 Luxembourg",
       "type": "hysteria",
-      "server": "109.104.153.91",
-      "server_port": 37519,
+      "server": "109.104.154.97",
+      "server_port": 48429,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -296,10 +296,10 @@
       }
     },
     {
-      "tag": "🇳🇱 Netherlands 2",
+      "tag": "🇱🇺 Luxembourg 2",
       "type": "hysteria",
-      "server": "109.104.153.91",
-      "server_port": 37519,
+      "server": "109.104.154.97",
+      "server_port": 48429,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -313,10 +313,10 @@
       }
     },
     {
-      "tag": "🇳🇱 Netherlands 3",
+      "tag": "🇱🇺 Luxembourg 3",
       "type": "hysteria",
-      "server": "109.104.153.91",
-      "server_port": 37519,
+      "server": "109.104.154.97",
+      "server_port": 48429,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
@@ -330,10 +330,10 @@
       }
     },
     {
-      "tag": "🇳🇱 Netherlands 4",
+      "tag": "🇱🇺 Luxembourg 4",
       "type": "hysteria",
-      "server": "109.104.153.91",
-      "server_port": 37519,
+      "server": "109.104.154.97",
+      "server_port": 48429,
       "up_mbps": 11,
       "down_mbps": 55,
       "auth_str": "dongtaiwang.com",
