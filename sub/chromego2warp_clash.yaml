@@ -163,62 +163,6 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: Luxembourg
-  type: hysteria
-  server: 109.104.154.97
-  port: 48429
-  ports: 10000-20000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: Luxembourg 2
-  type: hysteria
-  server: 109.104.154.97
-  port: 48429
-  ports: 10000-20000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: Luxembourg 3
-  type: hysteria
-  server: 109.104.154.97
-  port: 48429
-  ports: 10000-20000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-- name: Luxembourg 4
-  type: hysteria
-  server: 109.104.154.97
-  port: 48429
-  ports: 10000-20000
-  auth_str: dongtaiwang.com
-  up: 80
-  down: 100
-  fast-open: true
-  protocol: udp
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
 proxy-groups:
 - name: 节点选择
   type: select
@@ -250,10 +194,6 @@ proxy-groups:
   - France
   - Unknown 8
   - Unknown 9
-  - Luxembourg
-  - Luxembourg 2
-  - Luxembourg 3
-  - Luxembourg 4
 - name: 手动选择
   type: select
   proxies:
@@ -267,10 +207,6 @@ proxy-groups:
   - France
   - Unknown 8
   - Unknown 9
-  - Luxembourg
-  - Luxembourg 2
-  - Luxembourg 3
-  - Luxembourg 4
 - name: 负载均衡
   type: load-balance
   proxies:
@@ -284,10 +220,6 @@ proxy-groups:
   - France
   - Unknown 8
   - Unknown 9
-  - Luxembourg
-  - Luxembourg 2
-  - Luxembourg 3
-  - Luxembourg 4
   url: http://www.gstatic.com/generate_204
   interval: 300
   strategy: round-robin
