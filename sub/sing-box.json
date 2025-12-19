@@ -94,29 +94,14 @@
       "tag": "proxy",
       "type": "selector",
       "outbounds": [
-        "auto",
-        "Unknown",
-        "Unknown 2",
-        "Unknown 3",
-        "Unknown 4",
-        "Unknown 5",
-        "🇫🇷 France",
-        "🇫🇷 France 2",
-        "Unknown 6"
+        "auto"
       ]
     },
     {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "Unknown",
-        "Unknown 2",
-        "Unknown 3",
-        "Unknown 4",
-        "Unknown 5",
-        "🇫🇷 France",
-        "🇫🇷 France 2",
-        "Unknown 6"
+        "direct"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -133,142 +118,6 @@
     {
       "type": "block",
       "tag": "block"
-    },
-    {
-      "tag": "Unknown",
-      "type": "hysteria",
-      "server": "2001:bc8:32d7:17b::2",
-      "server_port": 11000,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "Unknown 2",
-      "type": "hysteria",
-      "server": "2001:bc8:32d7:17b::2",
-      "server_port": 11000,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "Unknown 3",
-      "type": "hysteria",
-      "server": "2001:bc8:32d7:17b::2",
-      "server_port": 11000,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "Unknown 4",
-      "type": "hysteria",
-      "server": "2001:bc8:32d7:17b::2",
-      "server_port": 11000,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "Unknown 5",
-      "type": "hysteria",
-      "server": "2001:bc8:32d7:902::3",
-      "server_port": 26691,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇫🇷 France",
-      "type": "hysteria",
-      "server": "62.210.196.68",
-      "server_port": 26691,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "🇫🇷 France 2",
-      "type": "hysteria",
-      "server": "62.210.196.68",
-      "server_port": 26691,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "tag": "Unknown 6",
-      "type": "hysteria",
-      "server": "2001:bc8:32d7:902::3",
-      "server_port": 26691,
-      "up_mbps": 50,
-      "down_mbps": 80,
-      "auth_str": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
     }
   ],
   "route": {
